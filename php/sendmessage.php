@@ -1,4 +1,6 @@
 <?php
+  //modify this to not connect to the database
+
   global $root;
   require_once($root."/php/components/database/dbConn.php");
   require_once($root."/php/components/functions/functions.php");
