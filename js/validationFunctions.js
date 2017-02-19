@@ -1,14 +1,5 @@
-var errors = [];
+var errors = new Array();
 var message="";
-var xhr=null;
-
-function redirectTo(location){
-	window.location=location;
-}
-
-function prepareString(string){
-	 return encodeURIComponent(string);
-}
 
 function addError(error){
 	errors.push(error);
@@ -21,8 +12,11 @@ function clearErrors(){
 	}
 }
 
-function clearErrorMessages(){
-	$(".errors").empty();
+function clearErrorMessages(classElement){
+	if(classElement == undefined){
+		classElement = ".errors";
+	}
+	$(classElement).empty();
 }
 
 function displayErrors(){

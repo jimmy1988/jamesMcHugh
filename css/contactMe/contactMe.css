@@ -342,4 +342,11 @@
 		margin-left: 100px;
 	}
 
+	#phoneNumber{
+		display: inline-block;
+    margin-left: 10px;
+    font-size: 22pt;
+    font-weight: 800;
+	}
+
 }

@@ -52,7 +52,7 @@
 			}
 
 			if($path!="basic"){
-				echo '<link type="text/css" rel="stylesheet" href="css/'.$path.'/' . $path . '.css" />';
+				echo '<link type="text/css" rel="stylesheet" href="css/'.$path.'/' . $path . '.css?.' . date('d-m-Y_h:i:s') . '" />';
 			}
 		?>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -82,10 +82,10 @@
 				<div id="innerContent" class="inner">
 					<h1>Contact Me</h1>
 						<div class="leftOverride">
-							<form id="contactForm">
+							<form id="contactForm" method="post" action="" onsubmit="">
 								<h2>Send me a Message</h2>
 								<em id="instructions">Please fill in all fields, then click submit to send me a message</em>
-								<div id="errors"></div>
+								<div id="errors" class="errors"></div>
 								<div id="firstName_section">
 									<label class="contactFormLabel">Your First Name: </label>
 									<input type="text" class="contactFormText" name="firstName" value="<?php if(isset($_POST["firstName"])){echo $_POST["firstName"];}  ?>" id="firstName"/>
@@ -102,7 +102,7 @@
 									<label class="contactFormLabel">Your Comment/Message: </label>
 									<textarea id="message" class="contactFormTextarea" name="message" rows="10"><?php if(isset($_POST["message"])){echo $_POST["message"];}?></textarea>
 								</div>
-								<input type="button" id="submit" name="submit" value="Submit"/>
+								<input type="submit" id="submit" name="submit" value="Submit"/>
 								<a href="#" id="spinnerContainer"><i id="spinner" class="fa fa-spinner fa-spin"></i></a>
 							</form>
 						</div>
@@ -111,16 +111,22 @@
 								<h2>Add me</h2>
 								<div>
 									<a href="#"><i class="fa fa-facebook-square"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
+									<!-- <a href="#"><i class="fa fa-twitter"></i></a>
 									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-pinterest-p"></i></a>
+									<a href="#"><i class="fa fa-pinterest-p"></i></a> -->
 								</div>
 							</div>
 							<div class="contactOther" id="mailLink">
 								<h2>Send me an E-mail</h2>
 								<div>
 									<a href="mailto:james.mchugh.webdeveloper@gmail.com"><i class="fa fa-envelope-o"></i></a>
-								</div
+								</div>
+							</div>
+							<div class="contactOther" id="callMe">
+								<h2>Call Me</h2>
+								<div>
+									<a href="07922955332"><i class="fa fa-phone" aria-hidden="true"></i><span id="phoneNumber">07922955332</span></a>
+								</div>
 							</div>
 						</div>
 				</div>
@@ -136,7 +142,7 @@
 
 		</div>
 		<!--End of Container-->
-		<script type="text/javascript" src="<?php echo $root; ?>js/contactMe/contactMe.js"></script>
+		<script type="text/javascript" src="js/contactMe/contactMe.js"></script>
 
 	</body>
 </html>

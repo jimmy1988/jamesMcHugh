@@ -113,20 +113,18 @@ function checkErrors($required_fields){
 	}
 }
 
-
-
-	function hasPresence($field){
-		//check to see if the data in the field is present
-		if(isset($field)){
-			if($field!=""){
-				return true;
-			}else{
-				return false;
-			}
+function hasPresence($field){
+	//check to see if the data in the field is present
+	if(isset($field)){
+		if($field!=""){
+			return true;
 		}else{
 			return false;
 		}
+	}else{
+		return false;
 	}
+}
 
 	function emailIsCorrectFormat($email){
 		//check for @
@@ -259,5 +257,97 @@ function checkErrors($required_fields){
 			return false;
 		}
 	}
+
+	//takes all errors as an array and outputs them to the user as html output
+	function form_errors($errors=array()){
+		//output for the errors starts out blank and fills in if there are errors
+		$output="";
+		//tests to see if errors are not empty, if there are errors they are displayed to the user
+		if(!empty($errors)){
+			//start of div
+			$output ="<div class = \"error\">";
+			//error message
+			$output.="Please fix the following errors:";
+			//start the list of errors
+			$output.="<ul>";
+			foreach($errors as $key => $error){
+				$output.="<li>";
+				$output.=htmlentities($error);
+				$output.="</li>";
+			}
+			//end of list
+			$output.="</ul>";
+			//end of div
+			$output.="</div>";
+
+		}
+		//returns the output as a string
+		return $output;
+	}
+
+	function validateData($email, $password){
+  	if(hasPresence($email) && hasPresence($password)){
+  		if(emailIsCorrectFormat($email) && passwordCorrectFormat($password)){
+  			return true;
+  		}else{
+  			return false;
+  		}
+  	}else{
+  		return false;
+  	}
+  }
+
+	//check that the phone numbers are valid
+  function checkPhoneNumbers($landlinePrefix, $landlineExt, $landlineNumber, $mobilePrefix, $mobileExt, $mobileNumber, $faxPrefix, $faxExt, $faxNumber){
+    $valid=true;
+
+    if( ( !isset($landlinePrefix) && !isset($landlineNumber) ) && ( !isset($mobilePrefix) && !isset($mobileNumber) ) && ( !isset($faxPrefix) && !isset($faxNumber) ) ){
+      return false;
+    }else{
+      if($valid && (isset($landlineNumber) && !empty($landlineNumber))){
+        if(hasPresence($landlinePrefix) && hasPresence($landlineNumber)){
+          $valid=true;
+        }else{
+          $valid=false;
+        }
+      }
+
+      if($valid && (isset($mobileNumber) && !empty($mobileNumber))){
+        if(hasPresence($mobilePrefix) && hasPresence($mobileNumber)){
+          $valid=true;
+        }else{
+          $valid=false;
+        }
+      }
+
+      if($valid && (isset($faxNumber) && !empty($faxNumber))){
+        if(hasPresence($faxPrefix) && hasPresence($faxNumber)){
+          $valid=true;
+        }else{
+          $valid=false;
+        }
+      }
+    }
+
+    return $valid;
+  }
+
+  //check that adddress 2 is valid
+  function checkAddress2($address2){
+    if(isset($address2) && !empty($address2)){
+      if(hasPresence($address2)){
+        return true;
+      }else{
+        return false;
+      }
+    }else{
+      return true;
+    }
+  }
+
+  //check that 2 passwords match
+  function passwordsMatch($password1, $password2){
+    return $password1 == $password2;
+  }
 
 ?>
