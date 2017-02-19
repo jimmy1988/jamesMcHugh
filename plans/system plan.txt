@@ -1,0 +1,16 @@
+quotation & register:
+
+new user: 
+	(main  user only) 
+	
+	Title, firstname, surname, landline, mobile, fax (country code+extension), email,company, Address1, Address 2, City, County, Country, Post/Zip Code
+
+(verification)
+
+(new card request)
+
+quotes:
+
+	new quote (just like new project with full price list and quotation number) --> Once complete ask if they want to setup an interview for the project.
+
+new project/quote:

@@ -1,0 +1,366 @@
+.errors {
+		background-color: red;
+		font-weight: 800;
+		text-transform: capitalize;
+		padding: 0 10px;
+		margin: 30px auto 0 auto;
+	  width: 80%;
+}
+
+/*Mobile Styles*/
+@media only screen and (max-width:480px){
+	#title{
+		text-align:center;
+		font-family:Pacifico;
+	}
+
+	#registerForm{
+		margin:50px auto;
+		width:90%;
+	}
+
+	.NQLRLabel{
+		display:block;
+		padding:0;
+		margin: 0  0 15px 0;
+		font-weight:800;
+		font-size:16pt;
+		text-align: center;
+	}
+
+	.NQLRText,
+	.NQLREmail,
+	.NQLRPassword,
+	.NQLRTextarea,
+	.NQLRSelect{
+		background: #7B8170;
+		border: 2px solid #FFFFFF;
+		border-radius: 4px;
+		font-size:16pt;
+		color: #FFFFFF;
+		margin: 15px auto;
+		display:block;
+		width: 50%;
+	}
+
+	#submitChange,
+	#backMainMenu{
+		background: none;
+		text-decoration:none;
+		display:block;
+		border: 2px solid #FFFFFF;
+		padding: 20px 60px;
+		margin: 25px auto;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		cursor:pointer;
+	}
+
+	#submitChange:hover,
+	#backMainMenu:hover{
+		text-decoration:none;
+		-webkit-transition: background-color 1000ms ease;
+		-moz-transition: background-color 1000ms ease;
+		-ms-transition: background-color 1000ms ease;
+		-o-transition: background-color 1000ms ease;
+		transition: background-color 1000ms ease;
+		background-color: #FFFFFF;
+		color:#000000;
+	}
+
+	.information{
+		display:block;
+		padding: 20px;
+		text-align: center;
+		font-weight: 800;
+	}
+
+	.addressSub{
+		text-align: center;
+	}
+
+	fieldset {
+		margin-bottom: 50px;
+	}
+
+	fieldset:last-child {
+		margin-bottom: 0;
+	}
+
+	.numberSpan{
+		display:block;
+		margin: 15px auto;
+		width:80%;
+		text-align:center;
+	}
+
+	.contact{
+		display:inline;
+	}
+
+	#landlinePrefixRegister,
+	#mobilePrefixRegister,
+	#faxPrefixRegister,
+	#landlineExtRegister,
+	#mobileExtRegister,
+	#faxExtRegister{
+		width:15%;
+	}
+
+	#landlineNumberegister,
+	#mobileNumberegister,
+	#faxNumberegister{
+		width:50%;
+	}
+
+	.plus{
+		font-weight: 800;
+		margin-right:10px;
+		font-size: 14pt;
+	}
+
+	.legalLink{
+		color:#FFF;
+		text-decoration: underline;
+	}
+
+	#submitChange,
+	#backMainMenu{
+		clear:both;
+		float: none;
+		margin:0 auto;
+	}
+}
+
+/*tablet styles*/
+@media only screen and (min-width:481px) and (max-width:979px){
+	#title{
+		text-align:center;
+		font-family:Pacifico;
+	}
+
+	#registerForm{
+		margin:50px auto;
+		width:80%;
+	}
+
+	fieldset {
+		margin-bottom: 50px;
+	}
+
+	fieldset:last-child {
+		margin-bottom: 0;
+	}
+
+	.numberSpan{
+		display:block;
+		margin: 15px auto;
+		width:80%;
+		text-align:center;
+	}
+
+	.contact{
+		display:inline;
+	}
+
+	.plus{
+		font-weight: 800;
+		margin-right:10px;
+		font-size: 14pt;
+	}
+
+	.legalLink{
+		color:#FFF;
+		text-decoration: underline;
+	}
+
+	.information{
+		display:block;
+		padding: 20px;
+		text-align: center;
+		font-weight: 800;
+	}
+
+	.addressSub{
+		text-align: center;
+	}
+
+	.NQLRLabel{
+		display:block;
+		padding:0;
+		margin: 0  0 15px 0;
+		font-weight:800;
+		font-size:16pt;
+		text-align: center;
+	}
+
+	.NQLRText,
+	.NQLREmail,
+	.NQLRPassword,
+	.NQLRTextarea,
+	.NQLRSelect{
+		background: #7B8170;
+		border: 2px solid #FFFFFF;
+		border-radius: 4px;
+		font-size:16pt;
+		color: #FFFFFF;
+		margin: 15px auto;
+		display:block;
+		width: 50%;
+	}
+
+	#landlinePrefixRegister,
+	#mobilePrefixRegister,
+	#faxPrefixRegister,
+	#landlineExtRegister,
+	#mobileExtRegister,
+	#faxExtRegister{
+		width:15%;
+	}
+
+	#landlineNumberegister,
+	#mobileNumberegister,
+	#faxNumberegister{
+		width:50%;
+	}
+
+	#submitChange,
+	#backMainMenu{
+		background: none;
+		text-decoration:none;
+		display:block;
+		border: 2px solid #FFFFFF;
+		padding: 20px 60px;
+		margin: 25px auto;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		cursor:pointer;
+	}
+
+	#submitChange:hover,
+	#backMainMenu:hover{
+		text-decoration:none;
+		-webkit-transition: background-color 1000ms ease;
+		-moz-transition: background-color 1000ms ease;
+		-ms-transition: background-color 1000ms ease;
+		-o-transition: background-color 1000ms ease;
+		transition: background-color 1000ms ease;
+		background-color: #FFFFFF;
+		color:#000000;
+	}
+}
+
+/*Desktop styles*/
+@media only screen and (min-width:980px){
+	#userDetails{
+		margin:50px auto;
+		width:70%;
+	}
+
+	.NQLRLabel{
+		display:block;
+		padding:0;
+		margin: 0  0 15px 0;
+		font-weight:800;
+		font-size:16pt;
+		text-align: center;
+	}
+
+	.NQLRText,
+	.NQLREmail,
+	.NQLRPassword,
+	.NQLRTextarea,
+	.NQLRSelect{
+		background: #7B8170;
+		border: 2px solid #FFFFFF;
+		border-radius: 4px;
+		font-size:16pt;
+		color: #FFFFFF;
+		margin: 15px auto;
+		display:block;
+		width: 50%;
+	}
+
+
+	#submitChange,
+	#backMainMenu{
+		background: none;
+		text-decoration:none;
+		display:block;
+		border: 2px solid #FFFFFF;
+		padding: 20px 60px;
+		margin: 25px auto;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		cursor:pointer;
+	}
+
+	#submitChange:hover,
+	#backMainMenu:hover{
+		text-decoration:none;
+		-webkit-transition: background-color 1000ms ease;
+		-moz-transition: background-color 1000ms ease;
+		-ms-transition: background-color 1000ms ease;
+		-o-transition: background-color 1000ms ease;
+		transition: background-color 1000ms ease;
+		background-color: #FFFFFF;
+		color:#000000;
+	}
+
+	.information{
+		display:block;
+    padding: 20px;
+    text-align: center;
+    font-weight: 800;
+	}
+
+	.addressSub{
+		text-align: center;
+	}
+
+	fieldset {
+    margin-bottom: 50px;
+	}
+
+	fieldset:last-child {
+    margin-bottom: 0;
+	}
+
+	.numberSpan{
+		display:block;
+		margin: 15px auto;
+		width:80%;
+		text-align:center;
+	}
+
+	.contact{
+		display:inline;
+	}
+
+	#landlinePrefixRegister,
+	#mobilePrefixRegister,
+	#faxPrefixRegister,
+	#landlineExtRegister,
+	#mobileExtRegister,
+	#faxExtRegister{
+		width:15%;
+	}
+
+	#landlineNumberegister,
+	#mobileNumberegister,
+	#faxNumberegister{
+		width:50%;
+	}
+
+	.plus{
+		font-weight: 800;
+		margin-right:10px;
+		font-size: 14pt;
+	}
+
+	.legalLink{
+		color:#FFF;
+		text-decoration: underline;
+	}
+
+}

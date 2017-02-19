@@ -1,0 +1,345 @@
+#errors {
+		background-color: red;
+		font-weight: 800;
+		text-transform: capitalize;
+		padding: 0 10px;
+		margin: 30px 0 0 0;
+}
+
+
+/*Mobile Styles*/
+@media only screen and (max-width:480px){
+	#content #innerContent h1{
+		text-align:center;
+		font-family:Pacifico;
+	}
+
+	.contactFormLabel{
+		display:block;
+		padding:0;
+		margin: 0  0 15px 0;
+		font-weight:800;
+		font-size:14pt;
+	}
+
+	.contactFormText, .contactFormEmail, .contactFormTextarea{
+		background: #7B8170;
+		border: 2px solid #FFFFFF;
+		border-radius: 4px;
+		font-size:14pt;
+		color: #FFFFFF;
+		margin: 15px 5%;
+		display:inline-block;
+		width:80%;
+	}
+
+	#submit, #spinnerContainer{
+		background: none;
+		border: 2px solid #FFFFFF;
+		padding: 20px 60px;
+		margin: 25px auto;
+		display:block;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		cursor:pointer;
+	}
+
+	#submit:hover{
+		text-decoration:none;
+		-webkit-transition: background-color 1000ms ease;
+		-moz-transition: background-color 1000ms ease;
+		-ms-transition: background-color 1000ms ease;
+		-o-transition: background-color 1000ms ease;
+		transition: background-color 1000ms ease;
+		background-color: #FFFFFF;
+		color:#000000;
+	}
+
+	#content #innerContent .leftOverride{
+			width:90%;
+			margin:0 auto;
+			padding: 30px 0;
+	}
+
+	div#firstName_section {
+		margin-top: 50px;
+	}
+
+	.contactOther i{
+		font-size: 23pt;
+		text-align:center;
+	}
+
+	#content #innerContent .rightOverride{
+		width:90%;
+		margin:0 auto;
+		padding: 30px 0;
+		text-align: center;
+		border-top: 3px solid #fff;
+	}
+
+	.contactOther a{
+		text-decoration:none;
+		color:#FFFFFF;
+		margin-right:25px;
+	}
+
+	.contactOther a:hover{
+		text-decoration:none;
+		-webkit-transition: color 500ms ease;
+		-moz-transition: color 500ms ease;
+		-ms-transition: color 500ms ease;
+		-o-transition: color 500ms ease;
+		transition: color 500ms ease;
+		color: #7b818c;
+	}
+
+	#socialLinks div {
+			margin-left: 20px;
+	}
+
+	#mailLink div {
+			margin-left: 15px;
+	}
+
+	p.error{
+		color:#ff0;
+		display:none;
+		text-transform:capitalize;
+		margin: 25px auto;
+		padding-left: 5px;
+		width:70%;
+	}
+
+	#spinnerContainer{
+		display:block;
+		text-align: center;
+		width:52px;
+		display:none;
+	}
+
+	#spinner{
+		font-size: 16pt;
+	}
+}
+
+/*tablet styles*/
+@media only screen and (min-width:481px) and (max-width:979px){
+
+	#content #innerContent h1{
+		text-align:center;
+		font-family:Pacifico;
+	}
+
+	.contactFormLabel{
+		display:block;
+		padding:0;
+		margin: 0  0 15px 0;
+		font-weight:800;
+		font-size:16pt;
+	}
+
+	.contactFormText, .contactFormEmail, .contactFormTextarea{
+		background: #7B8170;
+		border: 2px solid #FFFFFF;
+		border-radius: 4px;
+		font-size:16pt;
+		color: #FFFFFF;
+		margin: 15px 0 15px 5%;
+		display:inline-block;
+		width:80%;
+	}
+
+		#submit, #spinnerContainer{
+		background: none;
+		border: 2px solid #FFFFFF;
+		padding: 20px 60px;
+		margin: 25px auto;
+		display:block;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		cursor:pointer;
+	}
+
+		#submit:hover{
+		text-decoration:none;
+		-webkit-transition: background-color 1000ms ease;
+		-moz-transition: background-color 1000ms ease;
+		-ms-transition: background-color 1000ms ease;
+		-o-transition: background-color 1000ms ease;
+		transition: background-color 1000ms ease;
+		background-color: #FFFFFF;
+		color:#000000;
+	}
+
+	#content #innerContent .leftOverride{
+			width:70%;
+			margin:0 auto;
+			padding: 30px 0;
+	}
+
+	div#firstName_section {
+		margin-top: 50px;
+	}
+
+	.contactOther i{
+		font-size: 23pt;
+		text-align:center;
+	}
+
+	#content #innerContent .rightOverride{
+		width:70%;
+		margin:0 auto;
+		padding: 30px 0;
+		text-align: center;
+    border-top: 3px solid #fff;
+	}
+
+	.contactOther a{
+		text-decoration:none;
+		color:#FFFFFF;
+		margin-right:25px;
+	}
+
+	.contactOther a:hover{
+		text-decoration:none;
+		-webkit-transition: color 500ms ease;
+		-moz-transition: color 500ms ease;
+		-ms-transition: color 500ms ease;
+		-o-transition: color 500ms ease;
+		transition: color 500ms ease;
+		color: #7b818c;
+	}
+
+	#socialLinks div {
+	    margin-left: 20px;
+	}
+
+	#mailLink div {
+	    margin-left: 15px;
+	}
+
+	p.error{
+		color: #ff0;
+    display: none;
+    text-transform: capitalize;
+    margin: 25px 33% 25px auto;
+    width: 50%;
+    text-align: center;
+	}
+
+	#spinnerContainer{
+		display:block;
+		text-align: center;
+		width:52px;
+		display:none;
+	}
+
+	#spinner{
+		font-size: 16pt;
+	}
+}
+
+/*Desktop styles*/
+@media only screen and (min-width:980px){
+
+	#content #innerContent h1{
+		text-align:center;
+		font-family:Pacifico;
+	}
+
+	.contactFormLabel{
+		display:block;
+		padding:0;
+		margin: 0  0 15px 0;
+		font-weight:800;
+		font-size:16pt;
+	}
+
+	.contactFormText, .contactFormEmail, .contactFormTextarea{
+		background: #7B8170;
+		border: 2px solid #FFFFFF;
+		border-radius: 4px;
+		font-size:16pt;
+		color: #FFFFFF;
+		margin: 15px 58px;
+		display:inline-block;
+	}
+
+	#submit, #spinnerContainer{
+		background: none;
+		border: 2px solid #FFFFFF;
+		padding: 20px 60px;
+		margin: 25px 130px;
+		color: #FFFFFF;
+		text-transform: uppercase;
+		cursor:pointer;
+	}
+
+	#submit:hover{
+		text-decoration:none;
+		-webkit-transition: background-color 1000ms ease;
+		-moz-transition: background-color 1000ms ease;
+		-ms-transition: background-color 1000ms ease;
+		-o-transition: background-color 1000ms ease;
+		transition: background-color 1000ms ease;
+		background-color: #FFFFFF;
+		color:#000000;
+	}
+
+	#spinnerContainer{
+		display:block;
+		text-align: center;
+		width:52px;
+		display:none;
+	}
+
+	#spinner{
+		font-size: 16pt;
+	}
+
+	#content #innerContent .leftOverride{
+		float:left;
+		border-right:3px solid #FFFFFF;
+		padding:0 40px;
+		margin-right:50px;
+	}
+
+	div#firstName_section {
+		margin-top: 50px;
+	}
+
+	.contactOther i{
+		font-size: 23pt;
+		text-align:center;
+	}
+
+	#content #innerContent .rightOverride{
+		margin-top:43px;
+		margin-right:10%;
+	}
+
+	.contactOther a{
+		text-decoration:none;
+		color:#FFFFFF;
+		margin-right:25px;
+	}
+
+	.contactOther a:hover{
+		text-decoration:none;
+		-webkit-transition: color 500ms ease;
+		-moz-transition: color 500ms ease;
+		-ms-transition: color 500ms ease;
+		-o-transition: color 500ms ease;
+		transition: color 500ms ease;
+		color: #7b818c;
+	}
+
+	p.error{
+		color:#ff0;
+		display:none;
+		text-transform:capitalize;
+		margin-left: 100px;
+	}
+
+}

@@ -1,0 +1,119 @@
+/*Mobile Styles*/
+@media only screen and (max-width:480px){
+
+	#innerContent{
+		padding: 5% 10%;
+		text-align: center;
+	}
+
+	a#mailTo{
+		text-decoration: underline;
+		color:inherit;
+	}
+
+	a#mailTo:hover{
+		color: #7b818c;
+	}
+
+	#nextAction{
+		margin-bottom:40px;
+	}
+
+	.btn{
+		text-decoration: none;
+		color:#FFF;
+		border:2px solid #FFF;
+		padding:20px;
+		text-transform:capitalize;
+		font-weight:800;
+		display: block;
+		width:80%;
+		margin:0 auto 25px auto;
+	}
+
+	.btn:hover{
+		text-decoration: none;
+		color:#000;
+		background-color: #FFF;
+	}
+
+}
+
+/*tablet styles*/
+@media only screen and (min-width:481px) and (max-width:979px){
+	#innerContent{
+		padding: 5% 10%;
+		text-align: center;
+	}
+
+	a#mailTo{
+		text-decoration: underline;
+		color:inherit;
+	}
+
+	a#mailTo:hover{
+		color: #7b818c;
+	}
+
+	#nextAction{
+		margin-bottom:40px;
+	}
+
+	.btn{
+		text-decoration: none;
+		color:#FFF;
+		border:2px solid #FFF;
+		padding:20px;
+		text-transform:capitalize;
+		font-weight:800;
+		display: block;
+		width:40%;
+		margin:0 auto 25px auto;
+	}
+
+	.btn:hover{
+		text-decoration: none;
+		color:#000;
+		background-color: #FFF;
+	}
+}
+
+/*Desktop styles*/
+@media only screen and (min-width:980px){
+
+	#innerContent{
+		padding: 5% 10%;
+    text-align: center;
+	}
+
+	a#mailTo{
+		text-decoration: underline;
+		color:inherit;
+	}
+
+	a#mailTo:hover{
+		color: #7b818c;
+	}
+
+	#nextAction{
+		margin-bottom:40px;
+	}
+
+	.btn{
+		text-decoration: none;
+		color:#FFF;
+		border:2px solid #FFF;
+		padding:20px;
+		text-transform:capitalize;
+		font-weight:800;
+		display: block;
+		width:40%;
+		margin:0 auto 25px auto;
+	}
+
+	.btn:hover{
+		text-decoration: none;
+		color:#000;
+		background-color: #FFF;
+	}
+}

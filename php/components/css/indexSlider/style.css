@@ -1,0 +1,813 @@
+/*Mobile Styles*/
+@media only screen and (max-width:480px){
+	#sliderContainer{
+		width:100%;
+		margin: 10px auto 0;
+		padding:0;
+		box-sizing: border-box;
+		overflow:hidden;
+	}
+
+	#slider{
+		list-style:none;
+		display:inline-block;
+		width:300%;
+		margin:0;
+		padding:0;
+		white-space:nowrap;
+	}
+
+	.slide{
+		display:inline-block;
+		list-style:none;
+		width:34%;
+		position:relative;
+		margin-right:-4px;
+	}
+
+	.content{
+		font-size:12pt;
+		z-index: 3;
+	}
+
+	.slide img{
+		width:100%;
+		height:600px;
+	}
+
+	#content1 h1,
+	#content1 h2,
+	#content1 h3{
+		text-align: center;
+		white-space: normal;
+	}
+
+	#content1{
+		position: absolute;
+		top: 10%;
+		left:50%;
+		margin-left:-160px;
+	}
+
+	#mainLinks{
+		padding:0;
+		margin:15% auto;
+		text-align: center;
+	}
+
+	#mainLinks a{
+		text-decoration: none;
+		color:#FFF;
+		border:2px solid #FFF;
+		padding:20px;
+		text-transform:capitalize;
+		font-weight:800;
+		display: block;
+	}
+
+	#mainLinks a#bookAppointment{
+		padding:20px 40px;
+		margin-bottom: 50px;
+	}
+
+	#mainLinks a:hover{
+		text-decoration: none;
+		color:#000;
+		background-color: #FFF;
+	}
+
+	#content2{
+		font-size: 12pt;
+		z-index: 3;
+		position: absolute;
+		top: 2%;
+		left: 50%;
+		margin-left: -180px;
+	}
+
+	#content2 h1,
+	#content2 h2{
+		text-align: center;
+		white-space: normal;
+	}
+
+	#content2 ul{
+		list-style: none;
+		display:block;
+		font-family: 'Open Sans', sans-serif;
+		margin:0 auto 20px auto;
+		width:60%;
+		padding:0;
+		font-size:12pt;
+		white-space: normal;
+	}
+
+	#content2 ul li {
+		margin-bottom: 15px;
+		white-space: normal;
+	}
+
+	#content2 ul li span{
+		color:#FFFF00;
+	}
+
+	#content2 a.moreInfo{
+		margin-left:20%;
+	}
+
+	a.moreInfo{
+		text-decoration: none;
+		color:#FFF;
+		border:2px solid #FFF;
+		text-transform:capitalize;
+		font-weight:800;
+		display: inline-block;
+		padding:20px 40px;
+	}
+
+	.moreInfo:hover{
+		text-decoration: none;
+		color:#000;
+		background-color: #FFF;
+	}
+
+	#content3{
+		font-size: 12pt;
+		z-index: 3;
+		position: absolute;
+		top: 5%;
+		left: 50%;
+		margin-left: -160px;
+	}
+
+	#content3 h1,
+	#content3 h2{
+		text-align: center;
+		white-space: normal;
+	}
+
+	#content3 ul{
+		list-style: none;
+		display:block;
+		font-family: 'Open Sans', sans-serif;
+		margin:0 auto 40px auto;
+		width:60%;
+		padding:0;
+		font-size:12pt;
+	}
+
+	#content3 ul li{
+		margin-bottom: 15px;
+		white-space: normal;
+	}
+
+	#content3 ul li span{
+		color:#FFFF00;
+	}
+
+	#content3 a.moreInfo{
+		 margin-left:15%;
+	}
+
+	#content4{
+		font-size: 12pt;
+		z-index: 3;
+		position: absolute;
+		top: 5%;
+		left: 50%;
+		margin-left: -150px;
+	}
+
+	#content4 h1,
+	#content4 h2{
+		text-align: center;
+		white-space: normal;
+	}
+
+	#content4 ul{
+		list-style: none;
+		display:block;
+		font-family: 'Open Sans', sans-serif;
+		margin:0 auto 40px auto;
+		width:75%;
+		padding:0;
+		font-size:12pt;
+	}
+
+	#content4 ul li{
+		margin-bottom: 15px;
+		white-space: normal;
+	}
+
+	#content4 ul li span{
+		color:#FFFF00;
+	}
+
+	#content4 .moreInfo{
+		margin-left:15%;
+	}
+
+	#content5{
+		font-size: 12pt;
+		z-index: 3;
+		position: absolute;
+		top: 5%;
+		left: 50%;
+		margin-left: -47%;
+		width: 90%;
+	}
+
+	#content5 h1,
+	#content5 h2{
+		text-align: center;
+		white-space: normal;
+	}
+
+	#content5 ul{
+		list-style: none;
+		display:block;
+		font-family: 'Open Sans', sans-serif;
+		margin:0 auto 40px auto;
+		width:50%;
+		padding:0;
+		font-size:12pt;
+	}
+
+	#content5 ul li{
+		margin-bottom: 15px;
+		white-space: normal;
+	}
+
+	#content5 ul li span{
+		color:#FFFF00;
+	}
+
+	#content5 .moreInfo{
+		margin: 0 auto;
+		display: block;
+		width: 150px;
+		text-align: center;
+	}
+
+	#sliderControlPanel {
+		background-color: rgba(255,255,255, 0.2);
+		width: 100%;
+		height: 30px;
+		padding: 15px 0;
+		position: relative;
+		bottom: 64px;
+		z-index: 3;
+	}
+
+	.navSlider {
+		text-decoration: none;
+		color: #FFF;
+		margin-left: 25px;
+		margin-top: 3px;
+		font-size: 18pt;
+	}
+
+	.navSlider:hover {
+		text-decoration:none;
+		color: #7b818c;
+	}
+
+}
+
+/*tablet styles*/
+@media only screen and (min-width:481px) and (max-width:979px){
+	#sliderContainer{
+		width:100%;
+		margin: 20px auto 0;
+		padding:0;
+		box-sizing: border-box;
+		overflow:hidden;
+	}
+
+	#slider{
+		list-style:none;
+		display:inline-block;
+		width:300%;
+		margin:0;
+		padding:0;
+		white-space:nowrap;
+	}
+
+	.slide{
+		display:inline-block;
+		list-style:none;
+		width:34%;
+		position:relative;
+		margin-right:-4px;
+	}
+
+	.content{
+		font-size: 1.25em;
+		z-index: 3;
+	}
+
+	.slide img{
+		width:100%;
+		height:600px;
+	}
+
+	#content1{
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		margin-left: -190px;
+	}
+
+	#content1 h1,
+	#content1 h2,
+	#content1 h3{
+		text-align: center;
+		white-space: normal;
+	}
+
+	#mainLinks{
+		padding:0;
+		margin:15% auto;
+		text-align: center;
+	}
+
+	#mainLinks a{
+		text-decoration: none;
+		color:#FFF;
+		border:2px solid #FFF;
+		padding:20px;
+		text-transform:capitalize;
+		font-weight:800;
+		display: block;
+	}
+
+		#mainLinks a#bookAppointment{
+			padding:20px 40px;
+			margin-bottom: 50px;
+		}
+
+		#mainLinks a:hover{
+			text-decoration: none;
+			color:#000;
+			background-color: #FFF;
+		}
+
+		#content2{
+			font-size: 12pt;
+			z-index: 3;
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			margin-left: -185px;
+		}
+
+		#content2 h1,
+		#content2 h2{
+			text-align: center;
+			white-space: normal;
+		}
+
+		#content2 ul{
+			list-style: none;
+			display:block;
+			font-family: 'Open Sans', sans-serif;
+			margin:0 auto 20px auto;
+			width:60%;
+			padding:0;
+			font-size:12pt;
+		}
+
+		#content2 ul li {
+			margin-bottom: 15px;
+			white-space: normal;
+		}
+
+		#content2 ul li span{
+			color:#FFFF00;
+		}
+
+		#content2 a.moreInfo{
+			 margin-left:20%;
+		}
+
+		a.moreInfo{
+			text-decoration: none;
+			color:#FFF;
+			border:2px solid #FFF;
+			text-transform:capitalize;
+			font-weight:800;
+			display: inline-block;
+			padding:20px 40px;
+		}
+
+		.moreInfo:hover{
+			text-decoration: none;
+			color:#000;
+			background-color: #FFF;
+		}
+
+		#content3{
+			font-size: 12pt;
+			z-index: 3;
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			margin-left: -160px;
+		}
+
+		#content3 h1,
+		#content3 h2{
+			text-align: center;
+			white-space: normal;
+		}
+
+		#content3 ul{
+			list-style: none;
+			display:block;
+			font-family: 'Open Sans', sans-serif;
+			margin:0 auto 40px auto;
+			width:60%;
+			padding:0;
+			font-size:12pt;
+		}
+
+		#content3 ul li{
+			margin-bottom: 15px;
+			white-space: normal;
+		}
+
+		#content3 ul li span{
+			color:#FFFF00;
+		}
+
+		#content3 a.moreInfo{
+			 margin-left:15%;
+		}
+
+		#content4{
+			font-size: 12pt;
+			z-index: 3;
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			margin-left: -150px;
+		}
+
+		#content4 h1,
+		#content4 h2{
+			text-align: center;
+			white-space: normal;
+		}
+
+		#content4 ul{
+			list-style: none;
+			display:block;
+			font-family: 'Open Sans', sans-serif;
+			margin:0 auto 40px auto;
+			width:75%;
+			padding:0;
+			font-size:12pt;
+		}
+
+		#content4 ul li{
+			margin-bottom: 15px;
+			white-space: normal;
+		}
+
+		#content4 ul li span{
+			color:#FFFF00;
+		}
+
+		#content4 .moreInfo{
+			margin-left:15%;
+		}
+
+		#content5{
+			font-size: 12pt;
+			z-index: 3;
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			margin-left: -47%;
+			width: 90%;
+		}
+
+		#content5 h1,
+		#content5 h2{
+			text-align: center;
+			white-space: normal;
+		}
+
+		#content5 ul{
+			list-style: none;
+			display:block;
+			font-family: 'Open Sans', sans-serif;
+			margin:0 auto 40px auto;
+			width:50%;
+			padding:0;
+			font-size:12pt;
+		}
+
+		#content5 ul li{
+			margin-bottom: 15px;
+			white-space: normal;
+		}
+
+		#content5 ul li span{
+			color:#FFFF00;
+		}
+
+		#content5 .moreInfo{
+			margin: 0 auto;
+			display: block;
+			width: 150px;
+			text-align: center;
+		}
+
+		#sliderControlPanel {
+			background-color: rgba(255,255,255, 0.2);
+			width: 100%;
+			height: 30px;
+			padding: 15px 0;
+			position: relative;
+			bottom: 64px;
+			z-index: 3;
+		}
+
+		.navSlider {
+			text-decoration: none;
+			color: #FFF;
+			margin-left: 25px;
+			margin-top: 3px;
+			font-size: 18pt;
+		}
+
+		.navSlider:hover {
+			text-decoration:none;
+			color: #7b818c;
+		}
+
+}
+
+/*Desktop styles*/
+@media only screen and (min-width:980px){
+	#sliderContainer{
+		width:100%;
+		margin: 40px auto 0;
+		padding:0;
+		box-sizing: border-box;
+		overflow:hidden;
+	}
+
+	#slider{
+		list-style:none;
+		display:inline-block;
+		width:300%;
+		margin:0;
+		padding:0;
+		white-space:nowrap;
+	}
+
+	.slide{
+		display:inline-block;
+		list-style:none;
+		width:34%;
+		position:relative;
+		margin-right:-4px;
+	}
+
+	.slide img{
+		width:100%;
+		height:600px;
+	}
+
+	#content1{
+		font-size: 1.5em;
+    z-index: 3;
+		position: absolute;
+		top: 10%;
+    left: 50%;
+    margin-left: -285px;
+	}
+
+	#content1 h1,
+	#content1 h2,
+	#content1 h3{
+		text-align: center;
+	}
+
+	#mainLinks{
+		padding:0;
+		margin:15% auto;
+		text-align: center;
+	}
+
+	#mainLinks a{
+		text-decoration: none;
+		color:#FFF;
+		border:2px solid #FFF;
+		padding:20px;
+		text-transform:capitalize;
+		font-weight:800;
+		display: inline;
+	}
+
+		#mainLinks a#bookAppointment{
+			padding:20px 40px;
+			margin-right:20px
+		}
+
+		#mainLinks a:hover{
+			text-decoration: none;
+			color:#000;
+			background-color: #FFF;
+		}
+
+		#content2{
+			font-size: 12pt;
+	    z-index: 3;
+			position: absolute;
+			top: 5%;
+	    left: 50%;
+	    margin-left: -225px;
+		}
+
+		#content2 h1,
+		#content2 h2{
+			text-align: center;
+		}
+
+		#content2 ul{
+			list-style: none;
+			display:block;
+			font-family: 'Open Sans', sans-serif;
+			margin:0 auto 20px auto;
+			width:60%;
+			padding:0;
+			font-size:12pt;
+		}
+
+		#content2 ul li {
+	    margin-bottom: 15px;
+			white-space: normal;
+		}
+
+		#content2 ul li span{
+			color:#FFFF00;
+		}
+
+		#content2 .moreInfo{
+			margin-left:20%;
+		}
+
+		.moreInfo{
+			text-decoration: none;
+			color:#FFF;
+			border:2px solid #FFF;
+			text-transform:capitalize;
+			font-weight:800;
+			display: inline-block;
+			padding:20px 40px;
+		}
+
+		.moreInfo:hover{
+			text-decoration: none;
+			color:#000;
+			background-color: #FFF;
+		}
+
+		#content3{
+			font-size: 12pt;
+	    z-index: 3;
+			position: absolute;
+			top: 5%;
+	    left: 50%;
+	    margin-left: -225px;
+		}
+
+		#content3 h1,
+		#content3 h2{
+			text-align: center;
+		}
+
+		#content3 ul{
+			list-style: none;
+			display:block;
+			font-family: 'Open Sans', sans-serif;
+			margin:0 auto 40px auto;
+			width:60%;
+			padding:0;
+			font-size:12pt;
+		}
+
+		#content3 ul li{
+			margin-bottom: 15px;
+			white-space: normal;
+		}
+
+		#content3 ul li span{
+			color:#FFFF00;
+		}
+
+		#content3 .moreInfo{
+			margin-left:15%;
+		}
+
+		#content4{
+			font-size: 12pt;
+			z-index: 3;
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			margin-left: -225px;
+		}
+
+		#content4 h1,
+		#content4 h2{
+			text-align: center;
+		}
+
+		#content4 ul{
+			list-style: none;
+			display:block;
+			font-family: 'Open Sans', sans-serif;
+			margin:0 auto 40px auto;
+			width:75%;
+			padding:0;
+			font-size:12pt;
+		}
+
+		#content4 ul li{
+			margin-bottom: 15px;
+			white-space: normal;
+		}
+
+		#content4 ul li span{
+			color:#FFFF00;
+		}
+
+		#content4 .moreInfo{
+			margin-left:15%;
+		}
+
+		#content5{
+			font-size: 12pt;
+			z-index: 3;
+			position: absolute;
+			top: 5%;
+			left: 50%;
+			margin-left: -375px;
+		}
+
+		#content5 h1,
+		#content5 h2{
+			text-align: center;
+		}
+
+		#content5 ul{
+			list-style: none;
+			display:block;
+			font-family: 'Open Sans', sans-serif;
+			margin:0 auto 40px auto;
+			width:60%;
+			padding:0;
+			font-size:12pt;
+		}
+
+		#content5 ul li{
+			margin-bottom: 15px;
+			white-space: normal;
+		}
+
+		#content5 ul li span{
+			color:#FFFF00;
+		}
+
+		#content5 .moreInfo{
+			margin-left:25%;
+		}
+
+	#sliderControlPanel {
+    background-color: rgba(255,255,255, 0.2);
+    width: 100%;
+    height: 30px;
+    padding: 15px 0;
+    position: relative;
+    bottom: 64px;
+    z-index: 3;
+	}
+
+	.navSlider {
+    text-decoration: none;
+    color: #FFF;
+    margin-left: 25px;
+    margin-top: 3px;
+    font-size: 18pt;
+	}
+
+	.navSlider:hover {
+		text-decoration:none;
+		color: #7b818c;
+	}
+
+}

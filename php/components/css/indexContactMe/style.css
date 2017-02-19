@@ -1,0 +1,286 @@
+/*Mobile Styles*/
+@media only screen and (max-width:480px){
+
+	/*Outer Styles*/
+	#contactMe{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*inner styles*/
+	#contactMe #innerContactMe{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*Contact Me styles*/
+	#contactMe{
+		margin-top: 30px;
+		color:#FFFFFF;
+	}
+
+	#contactMe #innerContactMe{
+		padding: 8px 20px;
+		text-align:center;
+	}
+
+	#contactMe #innerContactMe h3{
+		color:#FFFFFF;
+		position: relative;
+		overflow: auto;
+		vertical-align: baseline;
+		display: inline;
+		padding: 0 20px;
+		text-align:center;
+	}
+
+	#contactMe #innerContactMe h3:before,
+	#contactMe #innerContactMe h3:after {
+		content: '';
+		display: block;
+		width:8em;
+		position: absolute;
+		top: 0.5em;
+		border-top: 3px solid #FFFFFF;
+	}
+
+	#contactMe #innerContactMe h3:before {
+		right: 100%;
+	}
+
+
+	#contactMe #innerContactMe h3:after {
+		left: 100%;
+	}
+
+
+	#contactMe #innerContactMe ul{
+		text-align: center;
+		vertical-align: middle;
+		padding: 40px 0;
+		margin: 26px auto 0 16px;
+	}
+
+	#contactMe #innerContactMe ul li{
+		list-style: none;
+		margin: 0 auto 20px -130px;
+		position: relative;
+		left: 50%;
+		display: block;
+		float: left;
+		clear: left;
+		vertical-align: middle;
+	}
+
+	#contactMe #innerContactMe ul li .userFunctions{
+		padding: 20px;
+		border: 2px solid #FFFFFF;
+		float: left;
+		font-weight: bold;
+		cursor: pointer;
+		text-decoration: none;
+		color: #FFFFFF;
+		display: block;
+		list-style: none;
+		width: 200px;
+	}
+
+	#contactMe #innerContactMe ul li .userFunctions:hover{
+		color:#000000;
+		background-color:#FFFFFF;
+	}
+
+}
+
+/*tablet styles*/
+@media only screen and (min-width:481px) and (max-width:979px){
+	/*Outer Styles*/
+	#contactMe{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*inner styles*/
+	#contactMe #innerContactMe{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*Contact Me styles*/
+	#contactMe{
+		margin-top: 30px;
+		color:#FFFFFF;
+	}
+
+	#contactMe #innerContactMe{
+		padding: 8px 20px;
+		text-align:center;
+	}
+
+	#contactMe #innerContactMe h3{
+		color:#FFFFFF;
+		position: relative;
+		overflow: auto;
+		vertical-align: baseline;
+		display: inline;
+		padding: 0 20px;
+		text-align:center;
+	}
+
+	#contactMe #innerContactMe h3:before,
+	#contactMe #innerContactMe h3:after {
+		content: '';
+		display: block;
+		width:13em;
+		position: absolute;
+		top: 0.5em;
+		border-top: 3px solid #FFFFFF;
+	}
+
+	#contactMe #innerContactMe h3:before {
+		right: 100%;
+	}
+
+
+	#contactMe #innerContactMe h3:after {
+		left: 100%;
+	}
+
+
+	#contactMe #innerContactMe ul{
+		text-align: center;
+		vertical-align: middle;
+		padding: 40px 0;
+		margin: 26px auto 0 16px;
+	}
+
+	#contactMe #innerContactMe ul li{
+		list-style: none;
+		margin: 0 auto 20px -130px;
+		position: relative;
+		left: 50%;
+		display: block;
+		float: left;
+		clear: left;
+		vertical-align: middle;
+	}
+
+	#contactMe #innerContactMe ul li .userFunctions{
+		padding: 20px;
+		border: 2px solid #FFFFFF;
+		float: left;
+		font-weight: bold;
+		cursor: pointer;
+		text-decoration: none;
+		color: #FFFFFF;
+		display: block;
+		list-style: none;
+		width: 200px;
+	}
+
+	#contactMe #innerContactMe ul li .userFunctions:hover{
+		color:#000000;
+		background-color:#FFFFFF;
+	}
+
+
+}
+
+/*Desktop styles*/
+@media only screen and (min-width:980px){
+	/*Outer Styles*/
+	#contactMe{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*inner styles*/
+	#contactMe #innerContactMe{
+		width:980px;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*Contact Me styles*/
+	#contactMe{
+		margin-top: 30px;
+		color:#FFFFFF;
+	}
+
+	#contactMe #innerContactMe{
+		padding: 8px 20px;
+		text-align:center;
+	}
+
+	#contactMe #innerContactMe h3{
+		color:#FFFFFF;
+		position: relative;
+		overflow: auto;
+		vertical-align: baseline;
+		display: inline;
+		padding: 0 20px;
+		text-align:center;
+	}
+
+	#contactMe #innerContactMe h3:before,
+	#contactMe #innerContactMe h3:after {
+	  content: '';
+	  display: block;
+	  width:400px;
+	  position: absolute;
+	  top: 0.73em;
+	  border-top: 3px solid #FFFFFF;
+	}
+
+	#contactMe #innerContactMe h3:before {
+		right: 100%;
+	}
+
+	#contactMe #innerContactMe h3:after {
+	  left: 100%;
+	}
+
+	#contactMe #innerContactMe ul{
+		text-align: center;
+		vertical-align: middle;
+		padding: 40px 0;
+		margin: 26px auto 0 16px;
+	}
+
+	#contactMe #innerContactMe ul li{
+		list-style: none;
+		margin: 0 16px;
+		display:inline-block;
+		vertical-align:middle;
+	}
+
+	#contactMe #innerContactMe ul li .userFunctions{
+		padding: 20px;
+		border: 2px solid #FFFFFF;
+		float: left;
+		font-weight: bold;
+		cursor: pointer;
+		text-decoration: none;
+		color: #FFFFFF;
+		display: block;
+		list-style: none;
+		width: 200px;
+	}
+
+	#contactMe #innerContactMe ul li .userFunctions:hover{
+		color:#000000;
+		background-color:#FFFFFF;
+	}
+
+}

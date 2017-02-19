@@ -1,0 +1,482 @@
+function responseProject(){
+  if(xhrProject.readyState == 4 && xhrProject.status == 200){
+		var response=xhrProject.responseText;
+
+		switch(response){
+			case("success"):
+			$("#errorsProject").html("");
+				resetProjectDetails();
+				resetOther();
+				resetGraphics();
+				resetLogo()
+				resetDatabases();
+				resetWebsites();
+				resetComponents();
+				redirectTo("yourQuotation.php");
+				break;
+			case("project not registered"):
+			case("website not registered"):
+			case("database not registered"):
+			case("logo not registered"):
+			case("graphics not registered"):
+			case("other not registered"):
+			case("quotation not registered"):
+				message="The quotation has not been registered due to an unknown error, please check the data you have submitted and try again";
+				addError(message);
+				$("#errorsProject").html(displayErrors(message));
+				var conf = confirm("The quotation has not been registered, an unknown error occured, do you wish to reset the form to try again?");
+				if(conf){
+					$("#errorsProject").html("");
+					resetProjectDetails();
+					resetOther();
+					resetGraphics();
+					resetLogo()
+					resetDatabases();
+					resetWebsites();
+					resetComponents();
+					hideNext($("#projectDetailsFieldset"));
+					showNext($("#componentSelection"));
+				}
+				break;
+			default:
+				message="There was an unknown error on the server: [Message] "+response;
+				addError(message);
+				$("#errorsProject").html(displayErrors(message));
+		 		break;
+		}
+  }
+}
+
+function requestProject(data){
+  if(window.XMLHttpRequest){
+    xhrProject=new XMLHttpRequest();
+  }else{
+    xhrProject=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  if(xhrProject !=null){
+
+    var theData="projectName=" + prepareString(projectName) + "&";
+        theData=theData.concat("websites=" + prepareString(components[0]) + "&");
+
+    if (components[0] == 1){
+      theData=theData.concat("websiteAction="+ websitesAction + "&");
+    }
+
+    theData=theData.concat("databases=" + prepareString(components[1]) + "&");
+
+    if (components[1] == 1){
+      theData=theData.concat("databasesAction="+ databasesAction + "&");
+    }
+
+    theData=theData.concat("logos=" + prepareString(components[2]) + "&");
+
+    if (components[2] == 1){
+      theData=theData.concat("logosAction="+ logosAction + "&");
+    }
+
+    theData=theData.concat("graphics=" + prepareString(components[3]) + "&");
+
+    if (components[3] == 1){
+      theData=theData.concat("graphicsAction="+ graphicsAction + "&");
+    }
+
+    theData=theData.concat("other=" + prepareString(components[4]) + "&");
+
+    if (components[4] == 1){
+      theData=theData.concat("otherDetails="+ other + "&");
+    }
+
+    theData=theData.concat("projectDetails=" + prepareString(newProjectDetails));
+
+    xhrProject.open("POST", "php/registerNewProject.php", true);
+    xhrProject.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+    xhrProject.send(theData);
+
+    xhrProject.onreadystatechange=responseProject;
+  }else{
+    message="There was a problem communicating with the server, please try again";
+    addError(message);
+    $("#errorsProject").html(displayErrors(message));
+  }
+}
+
+function saveProjectDetails(){
+  var projectDetails = $("#projectDetails").val();
+
+  if(projectDetails != ""){
+    newProjectDetails=projectDetails;
+    if(newProjectDetails != null){
+      requestProject();
+    }else{
+      message="The text field must be filled in for you you to proceed";
+      addError(message);
+      $("#errorsProject").html(displayErrors(message));
+    }
+  }else{
+    message="The text field must be filled in for you you to proceed";
+    addError(message);
+    $("#errorsProject").html(displayErrors(message));
+  }
+}
+
+function saveOther(){
+  var otherDetails=$("#otherInfo").val();
+
+  if(otherDetails != ""){
+    other=otherDetails;
+    if(other != null){
+      hideNext($("#otherSelectFieldset"));
+      showNext($("#projectDetailsFieldset"));
+    }else{
+      message="The text field must be filled in for you you to proceed";
+      addError(message);
+      $("#errorsProject").html(displayErrors(message));
+    }
+  }else{
+    message="The text field must be filled in for you you to proceed";
+    addError(message);
+    $("#errorsProject").html(displayErrors(message));
+  }
+}
+
+function saveGraphics(){
+  var buildItChecked=$("#buildItOptionGRA").prop("checked");
+  var adjustThemChecked=$("#adjustThemOptionGRA").prop("checked");
+  var otherItChecked=$("#otherOptionGRA").prop("checked");
+
+  if(buildItChecked || adjustThemChecked || otherItChecked){
+    if(buildItChecked){
+      graphicsAction="Build It";
+    }
+    if(adjustThemChecked){
+      graphicsAction="Adjust Them";
+    }
+    if(otherItChecked){
+      graphicsAction="Other";
+    }
+
+    if(graphicsAction != null){
+      if(components[4] == 1){
+        hideNext($("#graphicsSelectFieldset"));
+        showNext($("#otherSelectFieldset"));
+      }else{
+        hideNext($("#graphicsSelectFieldset"));
+        showNext($("#projectDetailsFieldset"));
+      }
+    }else{
+      message="You need to make a selection in order to proceed";
+      addError(message);
+      $("#errorsProject").html(displayErrors(message));
+    }
+  }else{
+    message="You need to make a selection in order to proceed";
+    addError(message);
+    $("#errorsProject").html(displayErrors(message));
+  }
+}
+
+function saveLogos(){
+  var buildItChecked=$("#buildItOptionLOGO").prop("checked");
+  var adjustItChecked=$("#adjustItOptionLOGO").prop("checked");
+  var otherItChecked=$("#otherOptionLOGO").prop("checked");
+
+  if(buildItChecked || adjustItChecked || otherItChecked){
+    if(buildItChecked){
+      logosAction="Build It";
+    }
+    if(adjustItChecked){
+      logosAction="Adjust It";
+    }
+    if(otherItChecked){
+      logosAction="Other";
+    }
+
+    if(logosAction != null){
+      if(components[3] == 1){
+        hideNext($("#logoSelectFieldset"));
+        showNext($("#graphicsSelectFieldset"));
+      }else{
+        if(components[4] == 1){
+          hideNext($("#logoSelectFieldset"));
+          showNext($("#otherSelectFieldset"));
+        }else{
+          hideNext($("#logoSelectFieldset"));
+          showNext($("#projectDetailsFieldset"));
+        }
+      }
+    }else{
+      message="You need to make a selection in order to proceed";
+      addError(message);
+      $("#errorsProject").html(displayErrors(message));
+    }
+  }else{
+    message="You need to make a selection in order to proceed";
+    addError(message);
+    $("#errorsProject").html(displayErrors(message));
+  }
+}
+
+function saveDatabases(){
+  var buildItChecked=$("#buildItOptionDB").prop("checked");
+  var maintainItChecked=$("#maintainItOptionDB").prop("checked");
+  var debugItChecked=$("#debugItOptionDB").prop("checked");
+  var otherChecked=$("#otherOptionDB").prop("checked");
+
+  if(buildItChecked || maintainItChecked || debugItChecked || otherChecked){
+    if(buildItChecked){
+      databasesAction="Build It";
+    }
+    if(maintainItChecked){
+      databasesAction="Maintain It";
+    }
+    if(debugItChecked){
+      databasesAction="Debug It";
+    }
+    if(otherChecked){
+      databasesAction="Other";
+    }
+
+    if(databasesAction != null){
+      if(components[2] == 1){
+        hideNext($("#databaseSelectFieldset"));
+        showNext($("#logoSelectFieldset"));
+      }else{
+        if(components[3] == 1){
+          hideNext($("#databaseSelectFieldset"));
+          showNext($("#graphicsSelectFieldset"));
+        }else{
+          if(components[4] == 1){
+            hideNext($("#databaseSelectFieldset"));
+            showNext($("#otherSelectFieldset"));
+          }else{
+            hideNext($("#databaseSelectFieldset"));
+            showNext($("#projectDetailsFieldset"));
+          }
+        }
+      }
+    }else{
+      message="You need to make a selection in order to proceed";
+      addError(message);
+      $("#errorsProject").html(displayErrors(message));
+    }
+  }else{
+    message="You need to make a selection in order to proceed";
+    addError(message);
+    $("#errorsProject").html(displayErrors(message));
+  }
+}
+
+function saveWebsites(){
+  var buildItChecked=$("#buildItOptionWEB").prop("checked");
+  var maintainItChecked=$("#maintainItOptionWEB").prop("checked");
+  var debugItChecked=$("#debugItOptionWEB").prop("checked");
+  var otherChecked=$("#otherOptionWEB").prop("checked");
+
+  if(buildItChecked || maintainItChecked || debugItChecked || otherChecked){
+    if(buildItChecked){
+      websitesAction="Build It";
+    }
+    if(maintainItChecked){
+      websitesAction="Maintain It";
+    }
+    if(debugItChecked){
+      websitesAction="Debug It";
+    }
+    if(otherChecked){
+      websitesAction="Other";
+    }
+
+    if(websitesAction != null){
+      if(components[1] == 1){
+        hideNext($("#websitesSelectFieldset"));
+        showNext($("#databaseSelectFieldset"));
+      }else{
+        if(components[2] == 1){
+          hideNext($("#websitesSelectFieldset"));
+          showNext($("#logoSelectFieldset"));
+        }else{
+          if(components[3] == 1){
+            hideNext($("#websitesSelectFieldset"));
+            showNext($("#graphicsSelectFieldset"));
+          }else{
+            if(components[4] == 1){
+              hideNext($("#websitesSelectFieldset"));
+              showNext($("#otherSelectFieldset"));
+            }else{
+              hideNext($("#websitesSelectFieldset"));
+              showNext($("#projectDetailsFieldset"));
+            }
+          }
+        }
+      }
+    }else{
+      message="You need to make a selection in order to proceed";
+      addError(message);
+      $("#errorsProject").html(displayErrors(message));
+    }
+
+  }else{
+    message="You need to make a selection in order to proceed";
+    addError(message);
+    $("#errorsProject").html(displayErrors(message));
+  }
+}
+
+function saveComponents(){
+  var projectDetailsBlank=$("#projectName").val();
+  var websiteChecked=$("#websiteCheck").prop("checked");
+  var databaseChecked=$("#databaseCheck").prop("checked");
+  var logoChecked=$("#logoCheck").prop("checked");
+  var graphicsChecked=$("#graphicsCheck").prop("checked");
+  var otherChecked=$("#otherCheck").prop("checked");
+
+  if(projectDetailsBlank!="" && (websiteChecked || databaseChecked || logoChecked || graphicsChecked || otherChecked)){
+    projectName=$("#projectName").val();
+    components[0]=convertBoolean(websiteChecked);
+    components[1]=convertBoolean(databaseChecked);
+    components[2]=convertBoolean(logoChecked);
+    components[3]=convertBoolean(graphicsChecked);
+    components[4]=convertBoolean(otherChecked);
+    if(components[0]==1){
+      hideNext($("#componentSelection"));
+      showNext($("#websitesSelectFieldset"));
+    }else{
+      if(components[1]==1){
+        hideNext($("#componentSelection"));
+        showNext($("#databaseSelectFieldset"));
+      }else{
+        if(components[2]==1){
+          hideNext($("#componentSelection"));
+          showNext($("#logoSelectFieldset"));
+        }else{
+          if(components[3]==1){
+            hideNext($("#componentSelection"));
+            showNext($("#graphicsSelectFieldset"));
+          }else{
+            hideNext($("#componentSelection"));
+            showNext($("#otherSelectFieldset"));
+          }
+        }
+      }
+    }
+  }else{
+    message="You need to fill in the project name and make a selection in order to proceed";
+    addError(message);
+    $("#errorsProject").html(displayErrors(message));
+  }
+}
+
+function resetProjectDetails(){
+  $("#projectDetails").val("");
+}
+
+function resetOther(){
+  $("#otherInfo").val("");
+}
+
+function resetGraphics(){
+  $("#buildItOptionGRA").attr("Checked", false);
+  $("#adjustThemOptionGRA").attr("Checked", false);
+  $("#otherOptionGRA").attr("Checked", false);
+}
+
+function resetLogo(){
+  $("#buildItOptionLOGO").attr("Checked", false);
+  $("#adjustItOptionLOGO").attr("Checked", false);
+  $("#otherOptionLOGO").attr("Checked", false);
+}
+
+function resetDatabases(){
+  $("#buildItOptionDB").attr("Checked", false);
+  $("#maintainItOptionDB").attr("Checked", false);
+  $("#debugItOptionDB").attr("Checked", false);
+  $("#otherOptionDB").attr("Checked", false);
+}
+
+function resetWebsites(){
+  $("#buildItOptionWEB").attr("Checked", false);
+  $("#maintainItOptionWEB").attr("Checked", false);
+  $("#debugItOptionWEB").attr("Checked", false);
+  $("#otherOptionWEB").attr("Checked", false);
+}
+
+function resetComponents(){
+  $("#projectName").val();
+  $("#websiteCheck").attr("Checked", false);
+  $("#databaseCheck").attr("Checked", false);
+  $("#logoCheck").attr("Checked", false);
+  $("#graphicsCheck").attr("Checked", false);
+  $("#otherCheck").attr("Checked", false);
+}
+
+$(document).ready(function(){
+  $("#clearComponents").on("click", resetComponents);
+  $("#resetWEB").on("click", resetWebsites);
+  $("#resetDB").on("click", resetDatabases);
+  $("#resetLogo").on("click", resetLogo);
+  $("#resetGraphics").on("click", resetGraphics);
+  $("#resetOther").on("click", resetOther);
+  $("#resetProjectDetails").on("click", resetProjectDetails);
+
+  $("#next").on("click", function(){
+		var conf=confirm("Is this data correct?");
+		if (conf){
+			$("#errorsProject").html("");
+	    saveComponents();
+		}
+
+  });
+
+  $("#nextWEB").on("click", function(){
+		var conf=confirm("Is this data correct?");
+		if (conf){
+	    $("#errorsProject").html("");
+	    saveWebsites();
+		}
+  });
+
+  $("#nextDB").on("click", function(){
+		var conf=confirm("Is this data correct?");
+		if (conf){
+	    $("#errorsProject").html("");
+	    saveDatabases();
+		}
+  });
+
+  $("#nextLogo").on("click", function(){
+		var conf=confirm("Is this data correct?");
+		if (conf){
+	    $("#errorsProject").html("");
+	    saveLogos();
+		}
+  });
+
+  $("#nextGraphics").on("click", function(){
+		var conf=confirm("Is this data correct?");
+		if (conf){
+	    $("#errorsProject").html("");
+	    saveGraphics();
+		}
+  });
+
+  $("#nextOther").on("click", function(){
+		var conf=confirm("Is this data correct?");
+		if (conf){
+	    $("#errorsProject").html("");
+	    saveOther();
+		}
+  });
+
+  $("#nextProjectDetails").on("click", function(){
+		if (conf){
+	    $("#errorsProject").html("");
+	    saveProjectDetails();
+		}
+  });
+
+	$("#buildItOptionWEB").on("click", function(){
+		alert("Hello");
+	});
+
+});

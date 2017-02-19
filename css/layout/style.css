@@ -1,0 +1,131 @@
+@font-face{
+	font-family:Pacifico;
+	src:url('../../fonts/Pacifico.ttf');
+}
+
+html{
+	min-width: 320px;
+	zoom:1;
+}
+
+body{
+	width:100%;
+	margin:0 auto;
+	padding:0;
+	box-sizing:border-box;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	background: #303238 url('../../images/bg01.png');
+	color:#FFFFFF;
+	overflow-x:hidden;
+}
+
+/*clear all floats*/
+.clear{
+	clear:both;
+}
+
+a:hover{
+	-webkit-transition: color 500ms ease;
+	-moz-transition: color 500ms ease;
+	-ms-transition: color 500ms ease;
+	-o-transition: color 500ms ease;
+	transition: color 500ms ease;
+}
+
+i:hover{
+	-webkit-transition: color 500ms ease;
+	-moz-transition: color 500ms ease;
+	-ms-transition: color 500ms ease;
+	-o-transition: color 500ms ease;
+	transition: color 500ms ease;
+}
+
+.left{
+	float:left;
+	clear: right;
+}
+
+.right{
+	float:right;
+	clear:right;
+}
+
+/*Mobile Styles*/
+@media only screen and (max-width:480px){
+	#container{
+		position: relative;
+		left:0;
+		z-index: 6;
+	}
+
+	.main{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing: border-box;
+	}
+
+	.inner{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	#welcome {
+		font-weight: 800;
+	}
+}
+
+/*tablet styles*/
+@media only screen and (min-width:481px) and (max-width:979px){
+	#container{
+		position: relative;
+		left:0;
+		z-index: 6;
+	}
+
+	.main{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing: border-box;
+	}
+
+	.inner{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	#welcome {
+		font-weight: 800;
+		margin-left: 20px;
+	}
+
+}
+
+/*Desktop styles*/
+@media only screen and (min-width:980px){
+
+		.main{
+			width:100%;
+			margin:0 auto;
+			padding:0;
+			box-sizing: border-box;
+		}
+
+		.inner{
+			width:980px;
+			margin:0 auto;
+			padding:0;
+			box-sizing:border-box;
+		}
+
+		#welcome {
+	    font-weight: 800;
+			margin-left: 20px;
+		}
+}

@@ -1,0 +1,483 @@
+/*Mobile Styles*/
+@media only screen and (max-width:480px){
+	/*Outer Styles*/
+	#myServices{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*Inner Styles*/
+	#myServices #innerMyServices{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*Our Services styles*/
+	#myServices{
+		margin-top: 20px;
+	}
+
+	#myServices #innerMyServices{
+		text-align:center;
+		overflow:visible;
+	}
+
+	#myServices #innerMyServices h3#title{
+		color:#FFFFFF;
+		position: relative;
+		overflow: auto;
+		vertical-align: baseline;
+		display: inline;
+		padding: 0 20px;
+		text-align:center;
+	}
+
+	#myServices #innerMyServices h3#title:before,
+	#myServices #innerMyServices h3#title:after {
+		content: '';
+		display: block;
+		width:13em;
+		position: absolute;
+		top: 0.73em;
+		border-top: 3px solid #FFFFFF;
+	}
+
+	#myServices #innerMyServices h3#title:before {
+		right: 100%;
+	}
+
+	#myServices #innerMyServices h3#title:after {
+		left: 100%;
+	}
+
+	#myServices #innerMyServices #align{
+		text-align: center;
+		padding: 25px 0;
+		margin: 24px auto 0;
+		display: block;
+		width: 80%;
+	}
+
+	#myServices #innerMyServices #align a{
+    display: block;
+    position: relative;
+    left: 50%;
+    margin: 50px -120px 0;
+    padding: 0;
+    float: left;
+    clear: left;
+    text-decoration: none;
+    color: #FFFFFF;
+	}
+
+	#myServices #innerMyServices #align a:hover{
+		text-decoration:none;
+		color:000000;
+	}
+
+	#myServices #innerMyServices #align a#planning{
+		width:224px;
+	}
+
+	#myServices #innerMyServices #align a#userInterface{
+		width:200px;
+	}
+
+	#myServices #innerMyServices #align a#userExperience{
+		width: 218px;
+		margin-left: -130px;
+	}
+
+	#myServices #innerMyServices #align a#SEO{
+		width: 180px;
+	  margin-left: -100px;
+	  margin-top: 50px;
+	}
+
+	#myServices #innerMyServices #align a#advice{
+		width: 207px;
+	  margin-left: -120px;
+	  margin-top: 50px;
+	}
+
+	#myServices #innerMyServices #align a div{
+		clear:both;
+		display:block;
+		margin:0;
+		padding:25px 0 0 0;
+		color:#FFFFFF;
+	}
+
+	#myServices #innerMyServices #align a i{
+		display:block;
+		text-align:center;
+		margin: 0 30px 0 0;
+		font-size:32pt;
+		color:#FFFFFF;
+	}
+
+	#myServices #innerMyServices #align a i:hover{
+		text-decoration:none;
+		color:#000000;
+	}
+
+	#myServices #innerMyServices #align a div:hover{
+		text-decoration:none;
+		color:#000000;
+	}
+
+	#myServices #innerMyServices #align a#planning i{
+		margin-left:38px;
+	}
+
+	#myServices #innerMyServices #align a#userInterface i{
+		margin-left:40px;
+	}
+
+	#myServices #innerMyServices #align a#userExperience i{
+			margin-left: 40px;
+	}
+
+	#myServices #innerMyServices #align a#SEO i{
+			margin-left: 25px;
+	}
+
+	#myServices #innerMyServices #align a#advice i{
+		margin-left:40px;
+	}
+
+	#myServices #innerMyServices #align a:first-child i{
+		float:left;
+		margin-left: 35px;
+	}
+
+	#myServices #innerMyServices #align a i:last-child{
+		margin-right:0;
+	}
+}
+
+/*tablet styles*/
+@media only screen and (min-width:481px) and (max-width:979px){
+	/*Outer Styles*/
+	#myServices{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*Inner Styles*/
+	#myServices #innerMyServices{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*Our Services styles*/
+	#myServices{
+		margin-top: 20px;
+	}
+
+	#myServices #innerMyServices{
+		text-align:center;
+		overflow:visible;
+	}
+
+	#myServices #innerMyServices h3#title{
+		color:#FFFFFF;
+		position: relative;
+		overflow: auto;
+		vertical-align: baseline;
+		display: inline;
+		padding: 0 20px;
+		text-align:center;
+	}
+
+	#myServices #innerMyServices h3#title:before,
+	#myServices #innerMyServices h3#title:after {
+		content: '';
+		display: block;
+		width:13em;
+		position: absolute;
+		top: 0.73em;
+		border-top: 3px solid #FFFFFF;
+	}
+
+	#myServices #innerMyServices h3#title:before {
+		right: 100%;
+	}
+
+	#myServices #innerMyServices h3#title:after {
+		left: 100%;
+	}
+
+	#myServices #innerMyServices #align{
+		text-align: center;
+		padding: 25px 0;
+		margin: 24px auto 0;
+		display: block;
+		width: 80%;
+	}
+
+	#myServices #innerMyServices #align a{
+		float:left;
+		display:block;
+		margin:50px 0 0;
+		padding:0;
+		text-decoration:none;
+		color:#FFFFFF;
+	}
+
+	#myServices #innerMyServices #align a:hover{
+		text-decoration:none;
+		color:000000;
+	}
+
+	#myServices #innerMyServices #align a#planning{
+		width:224px;
+		float:left;
+		clear:left;
+	}
+
+	#myServices #innerMyServices #align a#userInterface{
+		width:200px;
+		float:right;
+		clear:right;
+	}
+
+	#myServices #innerMyServices #align a#userExperience{
+		width:218px;
+		float:left;
+		clear:left;
+	}
+
+	#myServices #innerMyServices #align a#SEO{
+		width:180px;
+		float:right;
+		clear:right;
+		margin-top:50px;
+	}
+
+	#myServices #innerMyServices #align a#advice{
+		width:207px;
+		float:left;
+		clear:left;
+		margin-top:50px;
+	}
+
+	#myServices #innerMyServices #align a div{
+		clear:both;
+		display:block;
+		margin:0;
+		padding:25px 0 0 0;
+		color:#FFFFFF;
+	}
+
+	#myServices #innerMyServices #align a i{
+		display:block;
+		text-align:center;
+		margin: 0 30px 0 0;
+		font-size:32pt;
+		color:#FFFFFF;
+	}
+
+	#myServices #innerMyServices #align a i:hover{
+		text-decoration:none;
+		color:#000000;
+	}
+
+	#myServices #innerMyServices #align a div:hover{
+		text-decoration:none;
+		color:#000000;
+	}
+
+	#myServices #innerMyServices #align a#planning i{
+		margin-left:38px;
+	}
+
+	#myServices #innerMyServices #align a#userInterface i{
+		margin-left:40px;
+	}
+
+	#myServices #innerMyServices #align a#userExperience i{
+			margin-left: 40px;
+	}
+
+	#myServices #innerMyServices #align a#SEO i{
+			margin-left: 25px;
+	}
+
+	#myServices #innerMyServices #align a#advice i{
+		margin-left:40px;
+	}
+
+	#myServices #innerMyServices #align a:first-child i{
+		float:left;
+		margin-left: 35px;
+	}
+
+
+	#myServices #innerMyServices #align a i:last-child{
+		margin-right:0;
+	}
+}
+
+/*Desktop styles*/
+@media only screen and (min-width:980px){
+	/*Outer Styles*/
+	#myServices{
+		width:100%;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*Inner Styles*/
+	#myServices #innerMyServices{
+		width:980px;
+		margin:0 auto;
+		padding:0;
+		box-sizing:border-box;
+	}
+
+	/*Our Services styles*/
+	#myServices{
+		margin-top: 20px;
+	}
+
+	#myServices #innerMyServices{
+		text-align:center;
+		overflow:visible;
+	}
+
+	#myServices #innerMyServices h3#title{
+		color:#FFFFFF;
+		position: relative;
+		overflow: auto;
+		vertical-align: baseline;
+		display: inline;
+		padding: 0 20px;
+		text-align:center;
+	}
+
+	#myServices #innerMyServices h3#title:before,
+	#myServices #innerMyServices h3#title:after {
+	  content: '';
+	  display: block;
+	  width:400px;
+	  position: absolute;
+	  top: 0.73em;
+	  border-top: 3px solid #FFFFFF;
+	}
+
+	#myServices #innerMyServices h3#title:before {
+	  right: 100%;
+	}
+
+	#myServices #innerMyServices h3#title:after {
+	  left: 100%;
+	}
+
+	#myServices #innerMyServices #align{
+		text-align: center;
+		padding:25px 0;
+		margin-top:24px;
+		display: inline-block;
+	}
+
+	#myServices #innerMyServices #align a{
+		float:left;
+		display:block;
+		margin:0;
+		padding:0;
+		text-decoration:none;
+		color:#FFFFFF;
+	}
+
+	#myServices #innerMyServices #align a:hover{
+		text-decoration:none;
+		color:000000;
+	}
+
+	#myServices #innerMyServices #align a#planning{
+		width:224px;
+	}
+
+	#myServices #innerMyServices #align a#userInterface{
+		width:200px;
+	}
+
+	#myServices #innerMyServices #align a#userExperience{
+		width:218px;
+	}
+
+	#myServices #innerMyServices #align a#SEO{
+		width:130px;
+	}
+
+	#myServices #innerMyServices #align a#advice{
+		width:207px;
+	}
+
+	#myServices #innerMyServices #align a div{
+		clear:both;
+		display:block;
+		margin:0;
+		padding:25px 0 0 0;
+		color:#FFFFFF;
+	}
+
+	#myServices #innerMyServices #align a i{
+		display:block;
+		text-align:center;
+		margin: 0 30px 0 0;
+		font-size:32pt;
+		color:#FFFFFF;
+	}
+
+	#myServices #innerMyServices #align a i:hover{
+		text-decoration:none;
+		color:#000000;
+	}
+
+	#myServices #innerMyServices #align a div:hover{
+		text-decoration:none;
+		color:#000000;
+	}
+
+	#myServices #innerMyServices #align a#planning i{
+		margin-left:38px;
+	}
+
+	#myServices #innerMyServices #align a#userInterface i{
+		margin-left:40px;
+	}
+
+	#myServices #innerMyServices #align a#userExperience i{
+		  margin-left: 40px;
+	}
+
+	#myServices #innerMyServices #align a#SEO i{
+		  margin-left: 25px;
+	}
+
+	#myServices #innerMyServices #align a#advice i{
+		margin-left:40px;
+	}
+
+	#myServices #innerMyServices #align a:first-child i{
+		float:left;
+		margin-left: 35px;
+	}
+
+
+	#myServices #innerMyServices #align a i:last-child{
+		margin-right:0;
+	}
+
+}
