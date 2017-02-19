@@ -1,5 +1,10 @@
 var errors = [];
 var message="";
+var xhr=null;
+
+function redirectTo(location){
+	window.location=location;
+}
 
 function prepareString(string){
 	 return encodeURIComponent(string);
@@ -34,6 +39,44 @@ function displayErrors(){
 
 function checkEmpty(fieldValue){
 	return fieldValue=="";
+}
+
+function checkEmailFormat(fieldValue){
+	var at =fieldValue.indexOf("@")
+	if (at==-1){
+			return false;
+	}else{
+		var dot = fieldValue.indexOf(".", at);
+		if ( dot==-1){
+			return false;
+		}else{
+			var field2 = fieldValue.slice(dot+1);
+			if ((field2.length) <= 2 ){
+				return false;
+			}else{
+				return true;
+			}
+		}
+	}
+}
+
+function checkEmail(fieldValue, errorField, id, field) {
+
+	if(checkEmpty(fieldValue)){
+		message=id + " cannot be blank";
+		addError(message);
+		return false;
+	}else{
+
+		if (!checkEmailFormat(fieldValue)){
+			message = id + " has an Incorrect format for the field";
+			addError(message);
+			return false;
+		}else{
+			return true;
+		}
+
+	}
 }
 
 function checkPasswords(password1, password2){
@@ -339,7 +382,6 @@ function checkTextBoxDefault(fieldValue,errorField, id, field){
 		return false;
 	}else{
 		return true;
-	}
 }
 
 function getCountryCode(country){
