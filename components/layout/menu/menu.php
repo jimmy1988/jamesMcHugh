@@ -1,5 +1,10 @@
 <!--Start of Main Menu-->
-<link type="text/css" rel="stylesheet" href="php/components/css/menu/style.css">
+<?php
+  //hamburger button located on top.php
+?>
+<link type="text/css" rel="stylesheet" href="components/layout/menu/css/menu.css">
+<!--Import javascript-->
+<script type="text/javascript" src="js/hamburger.js"></script>
 <div id="mainMenu">
   <ul class="menu">
     <li><a href="index.php" title="Go to the Home Page"><i class="fa fa-home"></i></a></li>

@@ -1,7 +1,7 @@
 <?php global $root;?>
 
 <!--Start of Upper Footer-->
-<link type="text/css" rel="stylesheet" href="php/components/css/upperFooter/style.css">
+<link type="text/css" rel="stylesheet" href="components/layout/upperFooter/css/upperFooter.css">
   <div class="main" id="upperFooter">
     <div id="innerUpperFooter" class="inner">
       <div class="panel" id="logoPanel">

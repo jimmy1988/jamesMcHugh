@@ -341,7 +341,6 @@ function checkEmail(fieldValue, errorField, id, field) {
 		}else{
 			return true;
 		}
-
 	}
 }
 
@@ -382,6 +381,7 @@ function checkTextBoxDefault(fieldValue,errorField, id, field){
 		return false;
 	}else{
 		return true;
+	}
 }
 
 function getCountryCode(country){
@@ -1152,9 +1152,7 @@ function checkAddess2(address2){
 	}else{
 		address2Valid=true;
 	}
-
 	return address2Valid;
-
 }
 
 function updateCountryCode(){
@@ -1244,9 +1242,11 @@ function checkPhoneNumbers(){
 
 	//validate all three
 
-	if($(faxNumberField).val()=="" &&
+	if(
+			$(faxNumberField).val()=="" &&
 			$(mobileNumberField).val()!=="" &&
-			$(landlineNumberField).val()!=="")
+			$(landlineNumberField).val()!==""
+		)
 	{
 		valid=false;
 	}else{
@@ -1256,9 +1256,7 @@ function checkPhoneNumbers(){
 			valid=false;
 		}
 	}
-
 	return valid;
-
 }
 
 function changeCheckValue(value){
@@ -1267,6 +1265,5 @@ function changeCheckValue(value){
 	}else{
 		value=0;
 	}
-
 	return value;
 }

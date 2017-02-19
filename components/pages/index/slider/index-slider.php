@@ -1,5 +1,5 @@
 <!--Start of Slider-->
-<link type="text/css" rel="stylesheet" href="php/components/css/indexSlider/style.css">
+<link type="text/css" rel="stylesheet" href="components/pages/index/slider/css/index-slider.css">
 <div id="sliderContainer">
   <ul id="slider">
     <li class="slide" id="slide1">
@@ -79,5 +79,5 @@
     <a href="#" class="navSlider showIB" id="navSliderPause"><i class="fa fa-pause"></i></a>
   </div>
 </div>
-<script type="text/javascript" src="js/index/slider/slider.js"></script>
+<script type="text/javascript" src="components/pages/index/slider/js/index-slider.js"></script>
 <!--End of Slider-->

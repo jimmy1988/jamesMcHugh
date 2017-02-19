@@ -3,13 +3,11 @@
 	<head>
 
 		<?php
-			global $root;
 			$path=basename(__FILE__,'.php');
 
 			$pathString=str_split($path);
 
-			include($root.'/php/components/header.php');
-			include($root.'/php/components/header.php');
+			include('components/layout/header/header.php');
 			$newString="";
 			$i=0;
 			for($j=0; $j <= count($pathString); $j++){
@@ -54,7 +52,7 @@
 			}
 
 			if($path!="basic"){
-				echo '<link type="text/css" rel="stylesheet" href="css/'.$path.'/style.css" />';
+				echo '<link type="text/css" rel="stylesheet" href="css/'.$path.'/' . $path . '.css" />';
 			}
 		?>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,19 +62,15 @@
 		<!--Start of container-->
 		<div id="container">
 
-			<?php include($root.'/php/components/top.php'); ?>
+			<?php include('components/layout/top/top.php'); ?>
 
 			<div class="clear"></div>
 
-			<?php include($root.'/php/components/menu.php'); ?>
+			<?php include('components/layout/menu/menu.php'); ?>
 
 			<div class="clear"></div>
 
-			<?php include($root.'/php/components/membersBar.php'); ?>
-
-			<div class="clear"></div>
-
-			<?php include($root.'/php/components/noScript.php'); ?>
+			<?php include('components/layout/noScript/noScript.php'); ?>
 
 			<div class="clear"></div>
 
@@ -134,15 +128,15 @@
 
 			<div class="clear"></div>
 
-			<?php include($root.'/php/components/upperFooter.php'); ?>
+			<?php include('components/layout/upperFooter/upperFooter.php'); ?>
 
 			<div class="clear"></div>
 
-			<?php include($root.'/php/components/lowerFooter.php'); ?>
+			<?php include('components/layout/lowerFooter/lowerFooter.php'); ?>
 
 		</div>
 		<!--End of Container-->
-		<script type="text/javascript" src="<?php echo $root; ?>js/contactMe/validationFunctions.js"></script>
+		<script type="text/javascript" src="<?php echo $root; ?>js/contactMe/contactMe.js"></script>
 
 	</body>
 </html>

@@ -1,6 +1,6 @@
 <!--Start of No Script-->
 <!--Only displays when javascript is disabled-->
-<link type="text/css" rel="stylesheet" href="php/components/css/noScript/style.css">
+<link type="text/css" rel="stylesheet" href="components/layout/noScript/css/noScript.css">
 <noscript>
   <div class="noJS">
     <div class="inner">

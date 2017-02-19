@@ -1,5 +1,5 @@
 <!--Start of the header-->
-<link type="text/css" rel="stylesheet" href="php/components/css/top/style.css">
+<link type="text/css" rel="stylesheet" href="components/layout/top/css/top.css">
 <div class="main" id="header">
   <div class="inner" id="innerHeader">
     <div id="hamburger">

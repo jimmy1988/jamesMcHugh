@@ -1,6 +1,6 @@
 <?php global $root; ?>
 <!--Start of my Services-->
-<link type="text/css" rel="stylesheet" href="php/components/css/indexMyServices/style.css">
+<link type="text/css" rel="stylesheet" href="components/pages/index/myServices/css/index-myServices.css">
 <div class="main" id="myServices">
   <div class="inner" id="innerMyServices">
     <h3 id="title">MY SERVICES</h3>

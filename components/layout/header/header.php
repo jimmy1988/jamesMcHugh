@@ -1,8 +1,8 @@
 <?php
   $root=$_SERVER['DOCUMENT_ROOT'];
   //$root.="/jamesMcHugh";
-  if(strpos($root, "jamesMcHugh")<16){
-    $root=$root."jamesMcHugh";
+  if(strpos($root, "jamesMcHugh_live")<16){
+    $root=$root."jamesMcHugh_live";
   }
 
   //cache control - prevents the browser from caching the page
@@ -18,15 +18,4 @@
 <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/layout/style.css"/>
-<?php include($root.'/php/components/javascript.php'); ?>
-<?php
-
-
-  require_once($root."/php/components/database/dbConn.php");
-  require_once($root."/php/functions/validationFunctions.php");
-  require_once($root."/php/functions/functions.php");
-  if(!isset($_SESSION)){
-    require_once($root."/php/functions/sessionFunctions.php");
-  }
-
-?>
+<?php include('js/javascript.php'); ?>

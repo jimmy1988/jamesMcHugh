@@ -1,7 +1,7 @@
 <?php global $root;?>
 
 <!--Start of lower footer-->
-<link type="text/css" rel="stylesheet" href="php/components/css/lowerFooter/style.css">
+<link type="text/css" rel="stylesheet" href="components/layout/lowerFooter/css/lowerFooter.css">
 <div class="main" id="lowerFooter">
   <div class="inner" id="innerFooter">
     <p>James McHugh
