@@ -71,10 +71,6 @@
 
 			<div class="clear"></div>
 
-			<?php include($root.'/php/components/membersBar.php'); ?>
-
-			<div class="clear"></div>
-
 			<?php include($root.'/php/components/noScript.php'); ?>
 
 			<div class="clear"></div>
