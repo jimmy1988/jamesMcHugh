@@ -19,6 +19,5 @@ function isValid(){
 			//send to server
 			return true;
 		}
-	});
 
 }

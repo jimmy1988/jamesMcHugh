@@ -1,8 +1,8 @@
 <?php
 
   require_once("validationFunctions.php");
-  require_once('php/components/phpMailer/class.phpmailer.php');
-  require_once('php/components/phpMailer/class.smtp.php');
+  require_once('../php/components/phpMailer/class.phpmailer.php');
+  require_once('../php/components/phpMailer/class.smtp.php');
 
   function redirect_to($newLocation){
     header("Location: ".$newLocation);

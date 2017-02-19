@@ -121,6 +121,14 @@
 	#spinner{
 		font-size: 16pt;
 	}
+
+	#phoneNumber{
+		display: inline-block;
+    margin-left: 10px;
+    font-size: 22pt;
+    font-weight: 800;
+	}
+
 }
 
 /*tablet styles*/
@@ -238,6 +246,14 @@
 	#spinner{
 		font-size: 16pt;
 	}
+
+	#phoneNumber{
+		display: inline-block;
+    margin-left: 10px;
+    font-size: 22pt;
+    font-weight: 800;
+	}
+
 }
 
 /*Desktop styles*/
@@ -347,6 +363,10 @@
     margin-left: 10px;
     font-size: 22pt;
     font-weight: 800;
+	}
+
+	#contactForm{
+		width: 460px;
 	}
 
 }

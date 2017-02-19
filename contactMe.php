@@ -1,3 +1,7 @@
+<?php
+	require_once("php/functions/sessionFunctions.php");
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -82,25 +86,31 @@
 				<div id="innerContent" class="inner">
 					<h1>Contact Me</h1>
 						<div class="leftOverride">
-							<form id="contactForm" method="post" action="" onsubmit="">
+							<form id="contactForm" method="post" action="php/sendMessage.php">
 								<h2>Send me a Message</h2>
 								<em id="instructions">Please fill in all fields, then click submit to send me a message</em>
-								<div id="errors" class="errors"></div>
+								<div id="errors" class="errors">
+									<?php
+										if(isset($_SESSION['errors'])){
+											echo $_SESSION['errors'];
+										}
+									?>
+								</div>
 								<div id="firstName_section">
 									<label class="contactFormLabel">Your First Name: </label>
-									<input type="text" class="contactFormText" name="firstName" value="<?php if(isset($_POST["firstName"])){echo $_POST["firstName"];}  ?>" id="firstName"/>
+									<input type="text" class="contactFormText" name="firstName" value="<?php if(isset($_SESSION["firstName"])){echo $_SESSION["firstName"];}  ?>" id="firstName"/>
 								</div>
 								<div id="surname_section">
 									<label class="contactFormLabel">Your Surname: </label>
-									<input type="text" class="contactFormText" name="surname" value="<?php if(isset($_POST["surname"])){echo $_POST["surname"];} ?>" id="surname"/>
+									<input type="text" class="contactFormText" name="surname" value="<?php if(isset($_SESSION["surname"])){echo $_SESSION["surname"];} ?>" id="surname"/>
 								</div>
 								<div id="email_section">
 									<label class="contactFormLabel">Your E-mail Address: </label>
-									<input type="email" class="contactFormEmail" name="email" value="<?php if(isset($_POST["email"])){echo $_POST["email"];} ?>" id="email"/>
+									<input type="email" class="contactFormEmail" name="email" value="<?php if(isset($_SESSION["email"])){echo $_SESSION["email"];} ?>" id="email"/>
 								</div>
 								<div id="message_section">
 									<label class="contactFormLabel">Your Comment/Message: </label>
-									<textarea id="message" class="contactFormTextarea" name="message" rows="10"><?php if(isset($_POST["message"])){echo $_POST["message"];}?></textarea>
+									<textarea id="message" class="contactFormTextarea" name="message" rows="10"><?php if(isset($_SESSION["message"])){echo $_SESSION["message"];}?></textarea>
 								</div>
 								<input type="submit" id="submit" name="submit" value="Submit"/>
 								<a href="#" id="spinnerContainer"><i id="spinner" class="fa fa-spinner fa-spin"></i></a>
@@ -111,9 +121,6 @@
 								<h2>Add me</h2>
 								<div>
 									<a href="#"><i class="fa fa-facebook-square"></i></a>
-									<!-- <a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-google-plus"></i></a>
-									<a href="#"><i class="fa fa-pinterest-p"></i></a> -->
 								</div>
 							</div>
 							<div class="contactOther" id="mailLink">
@@ -146,3 +153,10 @@
 
 	</body>
 </html>
+<?php
+	if(isset($_SESSION)){
+		//fallback in case this does not work
+    session_unset();
+    session_destroy();
+	}
+?>
