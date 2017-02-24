@@ -1,7 +1,4 @@
 <?php
-//stores the errors in an array
-//the array is empty because no errors exist yet
-$errors=array();
 
 //displays a field as the correct formatted text
 function field_name_as_text($fieldname){
@@ -20,23 +17,6 @@ function has_presence($value){
 	//makes sure the current field is set and is not blank
 	//returns a true or false value
 	return isset($value) && $value !== "";
-}
-
-//validates that a field has presence
-function validate_presences($required_fields){
-	//import errors from the global scope
-	global $errors;
-
-	//each field is evaluated for presence, if blank an error message is blank
-	foreach ($required_fields as $field){
-		//trims all spaces
-		$value =trim($_POST[$field]);
-		//check for presence
-		if (!has_presence($value)){
-			//if no presence is detected, generate error
-			$errors[$field]=field_name_as_text($field). " can't be blank";
-		}
-	}
 }
 
 //checks that the string length does not exceed the stated length
@@ -82,16 +62,16 @@ function checkEmail($email){
 				if($suffixLength > 1 ){
 					return true;
 				}else{
-					$errors['email'] = "Email is of an incorrect format";
+					return "Email is of an incorrect format";
 				}
 			}else{
-				$errors['email'] = "Email is of an incorrect format";
+				return "Email is of an incorrect format";
 			}
 		}else{
-			$errors['email'] = "Email is of an incorrect format";
+			return "Email is of an incorrect format";
 		}
 	}else{
-		$errors['email'] = "Email is of an incorrect format";
+		return "Email is of an incorrect format";
 	}
 }
 
@@ -100,91 +80,32 @@ function has_inclusion_in($value,$set){
 	return in_array($value,$set);
 }
 
-function checkErrors($required_fields){
-	global $errors;
-
-	validate_presences($required_fields);
-	if(empty($errors)){
-		$email=$_POST["email"];
-		checkEmail($email);
-		if(empty($errors)){
-			return true;
-		}
-	}
-}
-
-function hasPresence($field){
-	//check to see if the data in the field is present
-	if(isset($field)){
-		if($field!=""){
-			return true;
-		}else{
-			return false;
-		}
+function isCorrectLength($data, $min, $max){
+	if (strlen($data) >= $min && strlen($data) <=$max){
+		return true;
 	}else{
 		return false;
 	}
 }
 
-	function emailIsCorrectFormat($email){
-		//check for @
-		//check for . after @
-		//check for at least 2 chars after last .
-		$firstAtPos=strpos($email, "@");
-
-		if($firstAtPos){
-
-			$newEmail = substr($email, $firstAtPos+1);
-			$atRepeat = strpos($newEmail, "@");
-			if(!$atRepeat){
-
-				$dot1Pos=strpos($email, ".", $firstAtPos);
-
-				if ($dot1Pos){
-					$suffix=substr($email, $dot1Pos+1);
-					$suffixLength=strlen($suffix);
-					if($suffixLength > 1 ){
-						return true;
-					}else{
-						return false;
-					}
-				}else{
-					return false;
-				}
+function capitalLetterIsPresent($data){
+	$dataArray=str_split($data);
+	$valid=false;
+	for($i=0; $i<count($dataArray);$i++){
+		if(is_numeric($dataArray[$i])){
+			if($dataArray[$i] == strtoupper($dataArray[$i])){
+				$valid=true;
 			}else{
-				return false;
+				$valid=false;
 			}
 		}else{
-			return false;
+			continue;
 		}
 	}
 
-	function isCorrectLength($data, $min, $max){
-		if (strlen($data) >= $min && strlen($data) <=$max){
-			return true;
-		}else{
-			return false;
-		}
-	}
+	return $valid;
 
-	function capitalLetterIsPresent($data){
-		$dataArray=str_split($data);
-		$valid=false;
-		for($i=0; $i<count($dataArray);$i++){
-			if(is_numeric($dataArray[$i])){
-				if($dataArray[$i] == strtoupper($dataArray[$i])){
-					$valid=true;
-				}else{
-					$valid=false;
-				}
-			}else{
-				continue;
-			}
-		}
-
-		return $valid;
-
-	}
+}
 
 	function convertStringToNumber($string){
 		switch($string){
@@ -270,9 +191,9 @@ function hasPresence($field){
 			$output.="Please fix the following errors:";
 			//start the list of errors
 			$output.="<ul>";
-			foreach($errors as $key => $error){
+			for($i=0; $i<count($errors);$i++){
 				$output.="<li>";
-				$output.=htmlentities($error);
+				$output.=htmlentities($errors[$i]);
 				$output.="</li>";
 			}
 			//end of list
@@ -284,18 +205,6 @@ function hasPresence($field){
 		//returns the output as a string
 		return $output;
 	}
-
-	function validateData($email, $password){
-  	if(hasPresence($email) && hasPresence($password)){
-  		if(emailIsCorrectFormat($email) && passwordCorrectFormat($password)){
-  			return true;
-  		}else{
-  			return false;
-  		}
-  	}else{
-  		return false;
-  	}
-  }
 
 	//check that the phone numbers are valid
   function checkPhoneNumbers($landlinePrefix, $landlineExt, $landlineNumber, $mobilePrefix, $mobileExt, $mobileNumber, $faxPrefix, $faxExt, $faxNumber){

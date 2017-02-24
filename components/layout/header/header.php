@@ -17,5 +17,5 @@
 <link rel="icon" type="image/png" href="images/favicon.ico">
 <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="css/layout/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/layout/layout.css"/>
 <?php include('js/javascript.php'); ?>

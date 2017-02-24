@@ -91,8 +91,8 @@
 								<em id="instructions">Please fill in all fields, then click submit to send me a message</em>
 								<div id="errors" class="errors">
 									<?php
-										if(isset($_SESSION['errors'])){
-											echo $_SESSION['errors'];
+										if(isset($_SESSION['contactFormErrors'])){
+											echo $_SESSION['contactFormErrors'];
 										}
 									?>
 								</div>
