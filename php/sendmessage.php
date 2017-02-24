@@ -8,14 +8,12 @@
 
   //lock the form, so that
   if(isset($_POST) && isset($_POST['submit']) && $_POST['submit'] == 'Submit'){
-    // echo "success";
-
     $errors=array();
 
     $firstName=$_POST['firstName'];
     $surname=$_POST['surname'];
     $email=$_POST['email'];
-    $message==$_POST['message'];
+    $message=$_POST['message'];
 
     $error=false;
 
@@ -47,8 +45,13 @@
 
     if($error){
       $_SESSION['contactFormErrors'] = form_errors($errors);
+      $_SESSION['firstName'] = $firstName;
+      $_SESSION['surname'] = $surname;
+      $_SESSION['email'] = $email;
+      $_SESSION['message'] = $message;
       redirect_to("../contactMe.php");
     }else{
+
       if(sendEmailToClient($firstName, $surname, $email, $message)){
         if(sendEmailToHost($firstName, $surname, $email, $message)){
           redirect_to("../thankYou.php");

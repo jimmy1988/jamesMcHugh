@@ -338,9 +338,15 @@ function checkEmail(fieldValue, errorField, id, field) {
 	}
 }
 
-function checkCheckBoxdefault(fieldValue,errorField, id, field){
+function checkCheckBoxdefault(fieldValue,errorField, id, field, switchID){
 
-	id=switchID(id);
+	if(switchID == undefined){
+		switchID=true;
+	}
+
+	if(switchID=true){
+		id=switchID(id);
+	}
 
   if ($(field).attr("Checked") == false){
     message=id + " Needs to be Checked";
@@ -351,9 +357,15 @@ function checkCheckBoxdefault(fieldValue,errorField, id, field){
   }
 }
 
-function checkComboBoxDefault(fieldValue,errorField, id, field){
+function checkComboBoxDefault(fieldValue,errorField, id, field, switchID){
 
-	id=switchID(id);
+	if(switchID == undefined){
+		switchID=true;
+	}
+
+	if(switchID=true){
+		id=switchID(id);
+	}
 
   if ($(field).val()=="No Select"){
     message=id + " Needs a Selection";
@@ -365,9 +377,15 @@ function checkComboBoxDefault(fieldValue,errorField, id, field){
 }
 
 //check and modify if necessary
-function checkTextBoxDefault(fieldValue,errorField, id, field){
+function checkTextBoxDefault(fieldValue, errorField, id, field, switchID){
 
-	id=switchID(id);
+	if(switchID == undefined){
+		switchID=true;
+	}
+
+	if(switchID=true){
+		id=switchID(id);
+	}
 
 	if (checkEmpty(fieldValue)){
 		message=id + " cannot be blank";

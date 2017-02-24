@@ -3,15 +3,15 @@ function isValid(){
 		$("#submit").css({ "display":"none"});
 		$("#spinnerContainer").css({"display":"block"});
 
-		var firstNameCheck = checkTextBoxDefault($("#firstName").val(),$("#firstName_error"), $("#firstName").attr('id'), $("#firstName"));
-		var surnameCheck = checkTextBoxDefault($("#surname").val(),$("#surname_error"), $("#surname").attr('id'), $("#surname"));
-		var emailCheck = checkEmail($("#email").val(),$("#email_error"),$("#email").attr('id'), $("#email"));
-		var messageCheck = checkTextBoxDefault($("#message").val(),$("#message_error"), $("#message").attr('id'), $("#message"));
+		var firstNameCheck = checkTextBoxDefault($("#firstName").val(),$(".error"), $("#firstName").attr('id'), $("#firstName"), false);
+		var surnameCheck = checkTextBoxDefault($("#surname").val(),$("#surname_error"), $("#surname").attr('id'), $("#surname"), false);
+		var emailCheck = checkEmail($("#email").val(),$("#email_error"),$("#email").attr('id'), $("#email"), false);
+		var messageCheck = checkTextBoxDefault($("#message").val(),$("#message_error"), $("#message").attr('id'), $("#message"), false);
 
 		if ( !emailCheck || !firstNameCheck || !surnameCheck || !messageCheck){
 			$(".errors").html(displayErrors());
-			$("#submit").css({ "display":"block"});
 			$("#spinnerContainer").css({"display":"none"});
+			$("#submit").css({ "display":"block"});
 			return false;
 		}else{
 			$("#submit").css({ "display":"none"});
@@ -19,5 +19,4 @@ function isValid(){
 			//send to server
 			return true;
 		}
-
 }

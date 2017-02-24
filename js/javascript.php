@@ -8,10 +8,10 @@
 <!--General Javascript here-->
 
 	<!--General Validation Functions-->
-	<script type="text/javascript" src="js/validationFunctions.js"></script>
+	<script type="text/javascript" src="js/validationFunctions.js?<?php echo date('d-m-Y_h:i:s'); ?>"></script>
 	<!--General Functions-->
-	<script type="text/javascript" src="js/functions.js"></script>
+	<script type="text/javascript" src="js/functions.js?<?php echo date('d-m-Y_h:i:s'); ?>"></script>
 	<!--Fade from one page to another-->
-	<script type="text/javascript" src="js/fade.js"></script>
+	<script type="text/javascript" src="js/fade.js?<?php echo date('d-m-Y_h:i:s'); ?>"></script>
 	<!--Smooth Scrolling-->
-	<script type="text/javascript" src="js/smooth.js"></script>
+	<script type="text/javascript" src="js/smooth.js?<?php echo date('d-m-Y_h:i:s'); ?>"></script>

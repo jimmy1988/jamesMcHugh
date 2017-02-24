@@ -86,7 +86,7 @@
 					</p>
 					<h4 id="nextAction">What would you like to do now?</h4>
 					<a href="index.php" id="goHome" class="btn">Go to The Home Page</a>
-					<a href="login.php" id="loginAccount" class="btn">Login to My Account</a>
+					<!-- <a href="login.php" id="loginAccount" class="btn">Login to My Account</a> -->
 					<a href="contactMe.php" id="sendMessage" class="btn">Send Another Message</a>
 				</div>
 			</div>

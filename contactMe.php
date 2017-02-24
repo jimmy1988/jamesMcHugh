@@ -86,7 +86,7 @@
 				<div id="innerContent" class="inner">
 					<h1>Contact Me</h1>
 						<div class="leftOverride">
-							<form id="contactForm" method="post" action="php/sendMessage.php">
+							<form id="contactForm" method="post" action="php/sendMessage.php" onsubmit="return isValid();">
 								<h2>Send me a Message</h2>
 								<em id="instructions">Please fill in all fields, then click submit to send me a message</em>
 								<div id="errors" class="errors">
@@ -149,7 +149,7 @@
 
 		</div>
 		<!--End of Container-->
-		<script type="text/javascript" src="js/contactMe/contactMe.js"></script>
+		<script type="text/javascript" src="js/contactMe/contactMe.js?<?php echo date('d-m-Y_h:i:s'); ?>"></script>
 
 	</body>
 </html>
