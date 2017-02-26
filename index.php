@@ -84,11 +84,11 @@
 						Hi! I'm James and I am a Freelance Web Developer Based in Brighton.
 					</p>
 					<p id="summary">
-						I am a very down to earth guy who has a passion for computing especially web design, development and programming.
+						<span>I am a very down to earth guy who has a passion for computing especially web design, development and programming.</span>
 						<br/>
-						I have worked hard to achieve what I have achieved so far and plan to continue this with all of my future projects. I love being able to take a client's idea or problem and turn it into a working solution using a computer as the tools to help their dreams become reality.
+						<span>I have worked hard to achieve what I have achieved so far and plan to continue this with all of my future projects. I love being able to take a client's idea or problem and turn it into a working solution using a computer as the tools to help their dreams become reality.</span>
 						<br/>
-						I pride myself on getting to know the client and their idea or business first before commencing any form of design or specification. Once this is completed I can draft up a design and specifictaion for the project and get this signed off by the client, from that point forward the project can get built.
+						<span>I pride myself on getting to know the client and their idea or business first before commencing any form of design or specification. Once this is completed I can draft up a design and specifictaion for the project and get this signed off by the client, from that point forward the project can get built.</span>
 					</p>
 					<p id="keySkills">
 						I have knowledge in the following aspects of website design, development and programming:
