@@ -51,7 +51,13 @@
       <h4 id="projectProcessInformationTitle">How does a project proceed? <a href="#" id="openCloseConsulations">+</a></h4>
         <!--On load, close - use JS to open and close the div - change link from + to - and back again -->
       <p id="projectInformation">
-        
+        Once the consultation is completed and you are happy to proceed with the project, you will be asked to sign some documents, once these are signed, the specifictaion process begins.
+        The specification will outline the nature of your business and the business idea, it also outline the work that needs to be completed and the timescale we are working to. I will need the client to read and sign the specification to indicate that they are happy to proceed.
+        If any adjustments need to be made each adjustment needs to br written on a separate document followed by the clients signature, then the specification redrafted and signed.
+        Once all is in order we move on to design, this will be wireframes and images produced to simulate the from interface of the project, all forms and pages will be drafted first, then using flowcharts and diagrams I will then design the processes that will captures and process data.
+        Again, this will need signing off.
+        From this point forward a plan will be made to start the implementation of the project and the timescale to work to, the client wont need to intervene at this point. Here we devise plans to build, test and launch the site and maybe (upon request) promote it on the web.
+        Once everything is in order, the user signs off the project and payment is made, payment can be madein installments or in one lump sum (negotiations are available, subject to status, this may be revoked).
       </p>
     </div>
   </div>
