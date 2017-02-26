@@ -114,6 +114,14 @@
 
 			<div class="clear"></div>
 
+			<?php include('components/pages/index/myServices/index-myServices.php'); ?>
+
+			<div class="clear"></div>
+
+			<?php include('components/pages/index/contactMe/index-contactMe.php'); ?>
+
+			<div class="clear"></div>
+
 			<?php include('components/layout/upperFooter/upperFooter.php'); ?>
 
 			<div class="clear"></div>
