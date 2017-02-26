@@ -77,14 +77,6 @@
 
 			<div class="clear"></div>
 
-			<?php //include('components/pages/index/slider/index-slider.php'); ?>
-
-			<!-- <div class="clear"></div> -->
-
-			<?php //include('components/pages/index/myServices/index-myServices.php'); ?>
-
-			<!-- <div class="clear"></div> -->
-
 			<!--Start of Main Content-->
 			<div class="main" id="content">
 			  <div id="innerContent" class="inner">

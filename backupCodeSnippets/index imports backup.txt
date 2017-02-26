@@ -1,0 +1,7 @@
+<?php //include('components/pages/index/slider/index-slider.php'); ?>
+
+			<!-- <div class="clear"></div> -->
+
+			<?php //include('components/pages/index/myServices/index-myServices.php'); ?>
+
+			<!-- <div class="clear"></div> -->
