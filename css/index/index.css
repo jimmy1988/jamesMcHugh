@@ -136,13 +136,12 @@
 
 	/*Content styles here*/
 	#content{
-		color:#000000;
+		color:#FFFFFF;
 		margin-top:35px;
 	}
 
 	#content #innerContent{
 		padding: 18px;
-		background-color: #FFFFFF;
 	}
 
 	#content #innerContent #summary p{
