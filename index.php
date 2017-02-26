@@ -92,7 +92,28 @@
 						Hi! I'm James and I am a Freelance Web Developer Based in Brighton.
 					</p>
 					<p id="summary">
-						
+						I am a very down to earth guy who has a passion for computing especially web design, development and programming.
+						<br/>
+						I have worked hard to achieve what I have achieved so far and plan to continue this with all of my future projects. I love being able to take a client's idea or problem and turn it into a working solution using a computer as the tools to help their dreams become reality.
+						<br/>
+						I pride myself on getting to know the client and their idea or business first before commencing any form of design or specification. Once this is completed I can draft up a design and specifictaion for the project and get this signed off by the client, from that point forward the project can get built.
+					</p>
+					<p id="keySkills">
+						I have knowledge in the following aspects of website design, development and programming:
+						<ul id="skillsList">
+							<li>HTML(5) and CSS(3)</li>
+							<li>JavaScript</li>
+							<li>jQuery</li>
+							<li>PHP and MySQL</li>
+							<li>SQL</li>
+							<li>Version Control through Git and GitHub</li>
+							<li>Microsoft and Linux servers</li>
+						</ul>
+					</p>
+					<p id="summaryPart2">
+						Even if these skill sets do not mean much to you, you can be reassured that I have the skills to create a fully functional and visually pleasing website. All websites are standards compliant and are codes in the latest programming languages to guarantee security, they are also programmed to adapt to all browsers.
+						<br/>
+						Any advice that is given is genuine and researched for the latest information before it is given.
 					</p>
 					<a href="#" id="readMore">Read More</a>
 			  </div>
