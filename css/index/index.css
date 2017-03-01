@@ -86,33 +86,59 @@
 
 		/*Content styles here*/
 		#content{
-			color:#000000;
+			color:#FFFFFF;
 			margin-top:35px;
 		}
 
 		#content #innerContent{
 			padding: 18px;
-			background-color: #FFFFFF;
-			width:80%;
+			font-family: sans-serif;
+			width:95%;
 		}
 
-		#content #innerContent #summary p{
-			line-height:27px;
+		#content #innerContent #mainIntroduction {
+	    font-size: 22pt;
+			font-weight: 800;
+			text-align: center;
 		}
 
-		#content #innerContent #summary a{
-			text-decoration:none;
-			color:#FFFFFF;
-			background-color: #7b818c;
-			padding:10px;
-			line-height:30px;
-			border:2px solid  #7b818c;
-			border-radius:8px;
+		#content #innerContent #summary{
+			font-size: 14pt;
+			text-align: center;
 		}
 
-		#content #innerContent #summary a:hover{
-			text-decoration:none;
-			background-color:#303238;
+		#content #innerContent #summary span{
+			display: inline-block;
+			margin-bottom: 15px;
+		}
+
+		#content #innerContent #keySkills{
+			font-size: 14pt;
+		}
+
+		#content #innerContent #skillsList {
+	    display: block;
+	    width: 380px;
+	    margin: 0 auto;
+	    font-size: 16pt;
+		}
+
+		#content #innerContent #summaryPart2{
+			font-size: 14pt;
+			text-align: center;
+			line-height: 20px;
+		}
+
+		#content #innerContent #readMore {
+	    display: block;
+	    text-align: center;
+	    width: 125px;
+	    padding: 5px;
+	    text-decoration: none;
+	    color: #FFFFFF;
+	    border: 2px solid #FFF;
+	    border-radius: 2px;
+	    margin: 0 auto;
 		}
 }
 

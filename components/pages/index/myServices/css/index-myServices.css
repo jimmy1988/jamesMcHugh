@@ -158,6 +158,34 @@
 	#myServices #innerMyServices #align a i:last-child{
 		margin-right:0;
 	}
+
+	#myServices #innerMyServices #consultationAndProjectInformation{
+		font-family: sans-serif;
+		float: left;
+		clear: both;
+		width:100%;
+	}
+
+	#myServices #innerMyServices #consultationAndProjectInformation #consultationInformationTitle,
+	#myServices #innerMyServices #consultationAndProjectInformation #projectProcessInformationTitle{
+    font-size: 14pt;
+    font-weight: 800;
+		text-align: center;
+	}
+
+	#myServices #innerMyServices #consultationAndProjectInformation #consultationInformation,
+	#myServices #innerMyServices #consultationAndProjectInformation #projectInformation{
+    line-height: 25px;
+		padding:0 20px;
+		display: none;
+	}
+
+	#openCloseConsultations,
+	#openCloseProjects
+	{
+		color:#FFF;
+		font-size: 14pt;
+	}
 }
 
 /*tablet styles*/
@@ -221,13 +249,13 @@
 		padding: 25px 0;
 		margin: 24px auto 0;
 		display: block;
-		width: 80%;
+		width: 95%;
 	}
 
 	#myServices #innerMyServices #align a{
 		float:left;
 		display:block;
-		margin:50px 0 0;
+		margin:25px 0 0;
 		padding:0;
 		text-decoration:none;
 		color:#FFFFFF;
@@ -324,6 +352,34 @@
 
 	#myServices #innerMyServices #align a i:last-child{
 		margin-right:0;
+	}
+
+	#myServices #innerMyServices #consultationAndProjectInformation{
+		font-family: sans-serif;
+		float: left;
+		clear: both;
+		width:100%;
+	}
+
+	#myServices #innerMyServices #consultationAndProjectInformation #consultationInformationTitle,
+	#myServices #innerMyServices #consultationAndProjectInformation #projectProcessInformationTitle{
+    font-size: 14pt;
+    font-weight: 800;
+		text-align: center;
+	}
+
+	#myServices #innerMyServices #consultationAndProjectInformation #consultationInformation,
+	#myServices #innerMyServices #consultationAndProjectInformation #projectInformation{
+    line-height: 25px;
+		padding:0 20px;
+		display: none;
+	}
+
+	#openCloseConsultations,
+	#openCloseProjects
+	{
+		color:#FFF;
+		font-size: 14pt;
 	}
 }
 
