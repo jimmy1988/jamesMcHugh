@@ -20,7 +20,18 @@
 		font-family:Pacifico;
 	}
 
+	#mainIntroductionAboutMe,
+	#keySkills,
+	#myClients
+	{
+		font-size: 12pt;
+		line-height: 20px;
+	}
 
+	#marineTavernLogoImage{
+		background-color: #FFFFFF;
+		border-radius:7em;
+	}
 }
 
 /*tablet styles*/
@@ -35,7 +46,7 @@
 
 	#content #innerContent{
 		width:960px;
-		max-width:80%;
+		max-width:90%;
 		margin:0 auto;
 		padding:0;
 		box-sizing:border-box;
@@ -46,7 +57,18 @@
 		font-family:Pacifico;
 	}
 
+	#mainIntroductionAboutMe,
+	#keySkills,
+	#myClients
+	{
+		font-size: 14pt;
+		line-height: 25px;
+	}
 
+	#marineTavernLogoImage{
+		background-color: #FFFFFF;
+		border-radius:4em;
+	}
 }
 
 /*Desktop styles*/
@@ -65,6 +87,7 @@
 		margin:0 auto;
 		padding:0;
 		box-sizing:border-box;
+		font-family: sans-serif;
 	}
 
 	#content #innerContent h1{
@@ -72,5 +95,16 @@
 		font-family:Pacifico;
 	}
 
-	
+	#mainIntroductionAboutMe,
+	#keySkills,
+	#myClients
+	{
+		font-size: 14pt;
+		line-height: 25px;
+	}
+
+	#marineTavernLogoImage{
+		background-color: #FFFFFF;
+		border-radius:4em;
+	}
 }
