@@ -480,4 +480,20 @@
 		margin-right:0;
 	}
 
+	#myServices #innerMyServices #consultationAndProjectInformation{
+		font-family: sans-serif;
+	}
+
+	#myServices #innerMyServices #consultationAndProjectInformation #consultationInformationTitle,
+	#myServices #innerMyServices #consultationAndProjectInformation #projectProcessInformationTitle{
+    font-size: 14pt;
+    font-weight: 800;
+	}
+
+	#myServices #innerMyServices #consultationAndProjectInformation #consultationInformation,
+	#myServices #innerMyServices #consultationAndProjectInformation #projectInformation{
+    line-height: 25px;
+		display: none;
+	}
+
 }

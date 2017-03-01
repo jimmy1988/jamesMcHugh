@@ -1,6 +1,6 @@
 <?php global $root; ?>
 <!--Start of my Services-->
-<link type="text/css" rel="stylesheet" href="components/pages/index/myServices/css/index-myServices.css">
+<link type="text/css" rel="stylesheet" href="components/pages/index/myServices/css/index-myServices.css?<?php echo date('d-m-Y_h:i:s'); ?>">
 <div class="main" id="myServices">
   <div class="inner" id="innerMyServices">
     <h3 id="title">MY SERVICES</h3>
@@ -27,7 +27,7 @@
       </a>
     </div>
     <div id="consultationAndProjectInformation">
-      <h4 id="consultationInformationTitle">Consultations <a href="#" id="openCloseConsulations">+</a></h4>
+      <h4 id="consultationInformationTitle">Consultations <a href="#" id="openCloseConsulations">Find Out More</a></h4>
       <!--On load, close - use JS to open and close the div - change link from + to - and back again -->
       <p id="consultationInformation">
         Consultations are free.
@@ -48,7 +48,7 @@
         Examples of these are sketches or drawings of a design, flowcharts of how processes need to be completed and any studies you may have completed prior to consultation.
         <br/>
       </p>
-      <h4 id="projectProcessInformationTitle">How does a project proceed? <a href="#" id="openCloseConsulations">+</a></h4>
+      <h4 id="projectProcessInformationTitle">How does a project proceed? <a href="#" id="openCloseConsulations">Find Out More</a></h4>
         <!--On load, close - use JS to open and close the div - change link from + to - and back again -->
       <p id="projectInformation">
         Once the consultation is completed and you are happy to proceed with the project, you will be asked to sign some documents, once these are signed, the specifictaion process begins.
