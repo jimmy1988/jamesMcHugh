@@ -496,4 +496,11 @@
 		display: none;
 	}
 
+	#openCloseConsultations,
+	#openCloseProjects
+	{
+		color:#FFF;
+		font-size: 14pt;
+	}
+
 }
